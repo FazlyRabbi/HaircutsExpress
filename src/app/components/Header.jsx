@@ -63,7 +63,7 @@ export default function Header() {
             href="#"
             className="mr-4 cursor-pointer py-1.5  text-white font-medium"
           >
-            <Link href={"/"}>Haircuts Express</Link>
+            <Link href={"/"} className=" font-bold">Haircuts Express</Link>
           </Typography>
           <div className="hidden lg:block">{navList}</div>
           <div className=" space-x-5">

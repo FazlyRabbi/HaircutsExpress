@@ -135,7 +135,7 @@ function Home() {
       </div>
       {/* Map secton end */}
       {/* conttact secton start */}
-      <div className="bg-[#000] ">
+      {/* <div className="bg-[#000] ">
         <div className="container mx-auto">
           <div className=" grid grid-cols-1 gap-x-8 xl:grid-cols-2">
             <div>
@@ -167,7 +167,7 @@ function Home() {
             <div className="bg-white"></div>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* Contaact secton end */}
     </section>
   );

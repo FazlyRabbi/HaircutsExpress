@@ -79,7 +79,7 @@ function Services() {
                 <div className="py-10">
                   <Link
                     href={"#"}
-                    className="uppercase tracking-[2px] border-[1px] border-black py-4 px-8 hover:bg-black hover:text-white transition-all duration-200"
+                    className="uppercase tracking-[2px] border-[1px]  py-4 px-8 border-[#E2AE10] hover:bg-[#E2AE10] hover:text-white transition-all duration-200"
                   >
                     learn more
                   </Link>
@@ -113,7 +113,7 @@ function Services() {
                 <div className="py-10">
                   <Link
                     href={"#"}
-                    className="uppercase tracking-[2px] border-[1px] border-black py-4 px-8 hover:bg-black hover:text-white transition-all duration-200"
+                    className="uppercase tracking-[2px] border-[1px]  py-4 px-8 border-[#E2AE10] hover:bg-[#E2AE10] hover:text-white transition-all duration-200"
                   >
                     learn more
                   </Link>
@@ -147,7 +147,7 @@ function Services() {
                 <div className="py-10">
                   <Link
                     href={"#"}
-                    className="uppercase tracking-[2px] border-[1px] border-black py-4 px-8 hover:bg-black hover:text-white transition-all duration-200"
+                    className="uppercase tracking-[2px] border-[1px] border-[#E2AE10] hover:bg-[#E2AE10] py-4 px-8  hover:text-white transition-all duration-200"
                   >
                     learn more
                   </Link>
@@ -181,7 +181,7 @@ function Services() {
                 <div className="py-10">
                   <Link
                     href={"#"}
-                    className="uppercase tracking-[2px] border-[1px] border-black py-4 px-8 hover:bg-black hover:text-white transition-all duration-200"
+                    className="uppercase tracking-[2px] border-[1px] border-[#E2AE10] hover:bg-[#E2AE10] py-4 px-8  hover:text-white transition-all duration-200"
                   >
                     learn more
                   </Link>
@@ -215,7 +215,7 @@ function Services() {
                 <div className="py-10">
                   <Link
                     href={"#"}
-                    className="uppercase tracking-[2px] border-[1px] border-black py-4 px-8 hover:bg-black hover:text-white transition-all duration-200"
+                    className="uppercase tracking-[2px] border-[1px] border-[#E2AE10] hover:bg-[#E2AE10] py-4 px-8  hover:text-white transition-all duration-200"
                   >
                     learn more
                   </Link>
@@ -249,7 +249,7 @@ function Services() {
                 <div className="py-10">
                   <Link
                     href={"#"}
-                    className="uppercase tracking-[2px] border-[1px] border-black py-4 px-8 hover:bg-black hover:text-white transition-all duration-200"
+                    className="uppercase tracking-[2px] border-[1px] border-[#E2AE10] hover:bg-[#E2AE10] py-4 px-8  hover:text-white transition-all duration-200"
                   >
                     learn more
                   </Link>
@@ -283,7 +283,7 @@ function Services() {
                 <div className="py-10">
                   <Link
                     href={"#"}
-                    className="uppercase tracking-[2px] border-[1px] border-black py-4 px-8 hover:bg-black hover:text-white transition-all duration-200"
+                    className="uppercase tracking-[2px] border-[1px] border-[#E2AE10] hover:bg-[#E2AE10] py-4 px-8  hover:text-white transition-all duration-200"
                   >
                     learn more
                   </Link>
@@ -317,7 +317,7 @@ function Services() {
                 <div className="py-10">
                   <Link
                     href={"#"}
-                    className="uppercase tracking-[2px] border-[1px] border-black py-4 px-8 hover:bg-black hover:text-white transition-all duration-200"
+                    className="uppercase tracking-[2px] border-[1px] border-[#E2AE10] hover:bg-[#E2AE10] py-4 px-8  hover:text-white transition-all duration-200"
                   >
                     learn more
                   </Link>
@@ -351,7 +351,7 @@ function Services() {
                 <div className="py-10">
                   <Link
                     href={"#"}
-                    className="uppercase tracking-[2px] border-[1px] border-black py-4 px-8 hover:bg-black hover:text-white transition-all duration-200"
+                    className="uppercase tracking-[2px] border-[1px] border-[#E2AE10] hover:bg-[#E2AE10] py-4 px-8  hover:text-white transition-all duration-200"
                   >
                     learn more
                   </Link>
@@ -385,7 +385,7 @@ function Services() {
                 <div className="py-10">
                   <Link
                     href={"#"}
-                    className="uppercase tracking-[2px] border-[1px] border-black py-4 px-8 hover:bg-black hover:text-white transition-all duration-200"
+                    className="uppercase tracking-[2px] border-[1px] border-[#E2AE10] hover:bg-[#E2AE10] py-4 px-8 hover:text-white transition-all duration-200"
                   >
                     learn more
                   </Link>
@@ -419,7 +419,7 @@ function Services() {
                 <div className="py-10">
                   <Link
                     href={"#"}
-                    className="uppercase tracking-[2px] border-[1px] border-black py-4 px-8 hover:bg-black hover:text-white transition-all duration-200"
+                    className="uppercase tracking-[2px] border-[1px] border-[#E2AE10] hover:bg-[#E2AE10] py-4 px-8 hover:text-white transition-all duration-200"
                   >
                     learn more
                   </Link>
@@ -453,7 +453,7 @@ function Services() {
                 <div className="py-10">
                   <Link
                     href={"#"}
-                    className="uppercase tracking-[2px] border-[1px] border-black py-4 px-8 hover:bg-black hover:text-white transition-all duration-200"
+                    className="uppercase tracking-[2px] border-[1px] border-[#E2AE10] hover:bg-[#E2AE10] py-4 px-8 hover:text-white transition-all duration-200"
                   >
                     learn more
                   </Link>
@@ -487,7 +487,7 @@ function Services() {
                 <div className="py-10">
                   <Link
                     href={"#"}
-                    className="uppercase tracking-[2px] border-[1px] border-black py-4 px-8 hover:bg-black hover:text-white transition-all duration-200"
+                    className="uppercase tracking-[2px] border-[1px] border-[#E2AE10] hover:bg-[#E2AE10] py-4 px-8  hover:text-white transition-all duration-200"
                   >
                     learn more
                   </Link>
@@ -622,10 +622,10 @@ function Services() {
                 <input type="email" placeholder="Email" className="text-lg border-2 w-full py-2 px-5 text-black placeholder-[#272626] focus:outline-none"/>
                 <button
                  type="submit" 
-                 className="mt-4 text-sm py-1 px-4 border-[1px] border-black bg-black text-white hover:bg-white hover:text-black transition-all duration-200 ">Subscribe</button>
+                 className="mt-4 text-sm py-1 px-4 border-[1px] border-[#E2AE10] bg-[#E2AE10] hover:bg-white text-white  hover:text-black transition-all duration-200 ">Subscribe</button>
               </div>
               <p className="text-sm text-[#979595]">*Be the first to know about offers</p>
-            </div>
+           </div>
           </div>
       </div>
     </section>

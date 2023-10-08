@@ -1,10 +1,11 @@
 "use client";
 // imports components
+import Home from "./components/Home/Home";
 
-export default function Home() {
+export default function Index() {
   return (
     <>
-      <h1>Start Ups Boylar Plate</h1>
+      <Home />
     </>
   );
 }

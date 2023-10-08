@@ -1,12 +1,13 @@
+"use client";
 import React from "react";
 import Services from "../components/Services";
-
-// imports components
+import Header from "../components/Header";
 
 export default function Home() {
   return (
     <>
-     <Services/>
+      <Header />
+      <Services />
     </>
   );
 }

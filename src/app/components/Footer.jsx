@@ -47,22 +47,13 @@ function Footer() {
             <h3 className="uppercase text-2xl  font-semibold text-white">
               contact info
             </h3>
-            <div className="py-4">
-              <Link
-                href={"#"}
-                className="text-sm  hover:text-[#C59D5F] transition-all duration-200  text-[#aba59f]"
-              >
-                6 West Broadway, New York,
-                <br />
-                NY10012, USA
-              </Link>
-            </div>
+            <div className="py-4"></div>
             <div className="">
               <Link
                 href={"#"}
                 className="text-sm text-[#aba59f] hover:text-[#C59D5F] transition-all duration-200"
               >
-                ingo@example.com
+                ingo@haircutexpress.com
               </Link>
             </div>
             <Link

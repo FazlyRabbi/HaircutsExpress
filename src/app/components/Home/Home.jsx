@@ -146,14 +146,14 @@ function Home() {
                           $30
                         </p>
                       </div>
-                      <div className="border-b-2 border-[#6B6E69] hover:border-[#e07503] transition-all duration-200">
+                      <div className="border-b-2 border-[#6B6E69] hover:border-[#e07503]  transition-all duration-200">
                         <div className=" flex justify-center relative bg-cover bg-no-repeat overflow-hidden ">
                           <Image
                             src={barber_img_2}
                             alt="barber_image"
                             height={400}
                             width={400}
-                            className="w-full bg-cover hover:scale-110 ease-in-out transition-all duration-300"
+                            className="w-full bg-cover  shadow-md hover:scale-110 ease-in-out transition-all duration-300"
                           />
                         </div>
                         <h2 className="text-black font-bold text-2xl py-4">

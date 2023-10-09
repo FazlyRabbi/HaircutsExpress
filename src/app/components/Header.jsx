@@ -44,16 +44,29 @@ export default function Header() {
   }, []);
 
   const navList = (
-    <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+    <ul className="mb-4 mt-2 flex flex-col gap-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-10">
+      <Typography
+        as="li"
+     
+        color="blue-gray"
+        className="p-1  font-bold   text-[1rem]   text-white"
+      >
+        <Link
+          href="/"
+          className="flex   hover:text-[#c9ab8c] items-center"
+        >
+          Home
+        </Link>
+      </Typography>
       <Typography
         as="li"
         variant="small"
         color="blue-gray"
-        className="p-1  font-semibold     text-white"
+        className="p-1  font-bold   text-[1rem]   text-white"
       >
         <Link
           href="/service"
-          className="flex   hover:text-[#91765a] items-center"
+          className="flex   hover:text-[#c9ab8c] items-center"
         >
           Service
         </Link>
@@ -63,11 +76,11 @@ export default function Header() {
         as="li"
         variant="small"
         color="blue-gray"
-        className="p-1  font-semibold     text-white"
+        className="p-1  font-bold   text-[1rem]   text-white"
       >
         <Link
           href="/choose"
-          className="flex   hover:text-[#91765a] items-center"
+          className="flex   hover:text-[#c9ab8c] items-center"
         >
           Apoinment
         </Link>
@@ -77,13 +90,26 @@ export default function Header() {
         as="li"
         variant="small"
         color="blue-gray"
-        className="p-1  font-semibold     text-white"
+        className="p-1  font-bold   text-[1rem]   text-white"
       >
         <Link
           href="/about"
-          className="flex   hover:text-[#91765a] items-center"
+          className="flex   hover:text-[#c9ab8c] items-center"
         >
           About
+        </Link>
+      </Typography>
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1  font-bold   text-[1rem]   text-white"
+      >
+        <Link
+          href="/about"
+          className="flex   hover:text-[#c9ab8c] items-center"
+        >
+          Contact
         </Link>
       </Typography>
     </ul>

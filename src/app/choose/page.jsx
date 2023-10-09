@@ -3,12 +3,14 @@ import React from "react";
 import Header from "../components/Header";
 import { TabsNav } from "../components/TabsNav";
 import { Button } from "@material-tailwind/react";
+import Footer from "../components/Footer";
+
 
 function page() {
   return (
-    <section>
+    <section className="bg-[#F5EEE7] h-full">
       <Header className=" shadow-md" />
-      <div className=" container mx-auto">
+      <div className=" container mx-auto py-8">
         <div className=" md:grid-cols-2 gap-x-10 grid grid-cols-1">
           <div className="mt-5">
             <TabsNav />
@@ -88,6 +90,7 @@ function page() {
           </div>
         </div>
       </div>
+      <Footer />
     </section>
   );
 }

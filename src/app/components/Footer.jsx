@@ -16,13 +16,7 @@ function Footer() {
           <div>
             {/* <Image src={logo} alt="footerlogo" height={200} width={170} /> */}
           </div>
-          <p className="text-[#979595] text-sm py-4">
-            Looking for a great haircut in Queens NY, but not sure exactly what
-            you want? We will listen to your ideas and come up with a solution
-            for your hair that you will feel proud off! Confidence is what keeps
-            our clients coming back. Plus, we can also complement your cut with
-            a rich, beautiful hair color, highlights, or makeup.
-          </p>
+          <h3 className="py-3 text-white text-xl">Information</h3>
           <div className="flex items-center gap-3 py-2">
             <Link href="#" className="p-1 pr-3 border-r-2 border-[#AFAAA9]">
               <FaFacebookF className="text-black hover:text-[#C59D5F] text-[1.1rem]  transition-all duration-200" />

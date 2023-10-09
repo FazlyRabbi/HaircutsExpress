@@ -7,11 +7,12 @@ import about_img_2 from "../../img/about_img_2.jpg";
 import signature from "../../img/signature.svg";
 import { GiCheckMark } from "react-icons/gi";
 import { IoIosCut } from "react-icons/io";
+import {PiPlayLight} from "react-icons/pi"
 
 export default function About() {
   return (
     <section>
-      <div className="about_bg_img w-full py-40 lg:pt-60">
+      <div className="about_bg_img w-full py-40 ">
         <div className="container mx-auto px-4">
           <div className="text-white text-center">
             <p className="uppercase font-semibold text-lg lg:text-xl">
@@ -162,6 +163,19 @@ export default function About() {
         </div>
       </section>
       {/* ================================= */}
+      <section>
+         <div className="about_bg_img_2 w-full py-20 lg:py-28">
+          <div className="container mx-auto px-4">
+              <h2 className="text-3xl lg:text-5xl text-center font-semibold text-white lg:px-80">Watch Our Barbershop Promo Video</h2>
+              <div className="flex justify-center pt-10">
+                <Link href={"#"} className="border-2 p-4 text-white rounded-full flex items-center justify-center hover:text-[#91765A] hover:border-[#91765A] transition-all duration-300 hover:scale-95">
+                <PiPlayLight className=" text-4xl"/>
+                </Link>
+              </div>  
+          </div>
+         </div>
+      </section>
+      {/* ===================================== */}
     </section>
   );
 }

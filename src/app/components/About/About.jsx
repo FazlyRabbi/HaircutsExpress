@@ -7,11 +7,14 @@ import about_img_2 from "../../img/about_img_2.jpg";
 import signature from "../../img/signature.svg";
 import { GiCheckMark } from "react-icons/gi";
 import { IoIosCut } from "react-icons/io";
-import {PiPlayLight} from "react-icons/pi"
+import { PiPlayLight } from "react-icons/pi";
+import Header from "../Header";
+import Footer from "../Footer";
 
 export default function About() {
   return (
     <section>
+      <Header />
       <div className="about_bg_img w-full py-40 ">
         <div className="container mx-auto px-4">
           <div className="text-white text-center">
@@ -129,9 +132,10 @@ export default function About() {
             <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-4 lg:items-center lg:gap-0">
               <div className="flex lg:justify-center">
                 <Image
-                 src={about_img_2} alt="about-img" 
-                 className="lg:w-[30rem]"
-                 />
+                  src={about_img_2}
+                  alt="about-img"
+                  className="lg:w-[30rem]"
+                />
               </div>
               <div>
                 <p className="uppercase text-sm font-bold text-[#907559]">
@@ -164,18 +168,26 @@ export default function About() {
       </section>
       {/* ================================= */}
       <section>
-         <div className="about_bg_img_2 w-full py-20 lg:py-28">
+        <div className="about_bg_img_2 w-full py-20 lg:py-28">
           <div className="container mx-auto px-4">
-              <h2 className="text-3xl lg:text-5xl text-center font-semibold text-white lg:px-80">Watch Our Barbershop Promo Video</h2>
-              <div className="flex justify-center pt-10">
-                <Link href={"#"} className="border-2 p-4 text-white rounded-full flex items-center justify-center hover:text-[#91765A] hover:border-[#91765A] transition-all duration-300 hover:scale-95">
-                <PiPlayLight className=" text-4xl"/>
-                </Link>
-              </div>  
+            <h2 className="text-3xl lg:text-5xl text-center font-semibold text-white lg:px-80">
+              Watch Our Barbershop Promo Video
+            </h2>
+            <div className="flex justify-center pt-10">
+              <Link
+                href={"#"}
+                className="border-2 p-4 text-white rounded-full flex items-center justify-center hover:text-[#91765A] hover:border-[#91765A] transition-all duration-300 hover:scale-95"
+              >
+                <PiPlayLight className=" text-4xl" />
+              </Link>
+            </div>
           </div>
-         </div>
+        </div>
       </section>
+
       {/* ===================================== */}
+
+      <Footer />
     </section>
   );
 }

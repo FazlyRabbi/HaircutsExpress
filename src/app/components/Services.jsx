@@ -28,6 +28,7 @@ import services_small_img_9 from "../img/services_small_img_9.jpg";
 import services_small_img_10 from "../img/services_small_img_10.jpg";
 import services_small_img_11 from "../img/services_small_img_11.jpg";
 import services_small_img_12 from "../img/services_small_img_12.jpg";
+
 import {
   FaFacebookF,
   FaTwitter,
@@ -35,17 +36,17 @@ import {
   FaLinkedinIn,
 } from "react-icons/fa";
 
-import Header from "./Header";
-
 function Services() {
   return (
     <section>
-     
-      <div className="service_bg_img  w-full py-20 md:py-40">
-        <div className="container mx-auto px-4 ">
-          <div className="text-center">
-            <h2 className="uppercase font-semibold text-4xl md:text-6xl tracking-[2px]">
-              Services{" "}
+      <div className="about_bg_img w-full py-40 ">
+        <div className="container mx-auto px-4">
+          <div className="text-white text-center">
+            <p className="uppercase font-semibold text-lg lg:text-xl">
+              our service
+            </p>
+            <h2 className="text-4xl md:text-6xl font-bold py-2  lg:py-4 tracking-[1px]">
+              Service
             </h2>
           </div>
         </div>

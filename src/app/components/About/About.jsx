@@ -11,10 +11,13 @@ import signature from "../../img/signature.svg";
 import { GiCheckMark } from "react-icons/gi";
 import { IoIosCut } from "react-icons/io";
 import { PiPlayLight } from "react-icons/pi";
+import Header from "../Header";
+import Footer from "../Footer";
 
 export default function About() {
   return (
     <section>
+      <Header />
       <div className="about_bg_img w-full py-40 ">
         <div className="container mx-auto px-4">
           <div className="text-white text-center">
@@ -55,7 +58,7 @@ export default function About() {
                   <div className="flex items-center gap-2 text-[#6B6E69]">
                     <GiCheckMark className="text-sm" />
                     <p className="text-sm">
-                      We're professional and certified barbers
+                      We &apos;re professional and certified barbers
                     </p>
                   </div>
                   <div className="flex items-center gap-2 text-[#6B6E69]">
@@ -264,7 +267,10 @@ export default function About() {
           </div>
         </div>
       </section>
+
       {/* ===================================== */}
+
+      <Footer />
     </section>
   );
 }

@@ -109,13 +109,10 @@ export default function Header() {
       ${scrollHeight ? "min-h-[50px]  " : "min-h-[70px]"}
        flex items-center justify-between `}
       >
-        <Typography
-          as="a"
-          href="#"
-          className="mr-4 cursor-pointer uppercase  text-white py-1.5  font-semibold"
-        >
+        <Link href={`/`} className="block font-semibold">
           HairCuts Express
-        </Typography>
+        </Link>
+
         <div className="hidden lg:block">{navList}</div>
 
         <IconButton

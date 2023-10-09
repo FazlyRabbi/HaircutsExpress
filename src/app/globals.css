@@ -9,6 +9,14 @@
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
+    background-attachment: fixed;
+}
+.bg_img2{
+    background-image: url(./img/2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
 }
 
 .service_bg_img{
@@ -16,6 +24,8 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 60;
 }
 
 .about_bg_img{

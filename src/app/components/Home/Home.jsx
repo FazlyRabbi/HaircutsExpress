@@ -2,168 +2,116 @@
 import React from "react";
 import Image from "next/image";
 import Hero from "../Hero";
-import img1 from "../../img/img1.jpg";
-import img2 from "../../img/img2.jpg";
-import img3 from "../../img/img3.jpg";
-
-import GoogleMapReact from "google-map-react";
-import { Input, Textarea } from "@material-tailwind/react";
+import about_img_1 from "../../img/about_img_1.jpg";
+import about_img_2 from "../../img/about_img_2.jpg";
+import { GiCheckMark } from "react-icons/gi";
+import { IoIosCut } from "react-icons/io";
 import Header from "../Header";
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
-
-const defaultProps = {
-  center: {
-    lat: 10.99835602,
-    lng: 77.01502627,
-  },
-  zoom: 11,
-};
-
 
 function Home() {
   return (
     <section className="  relative">
-      <Header/>
+      <Header />
       {/* hero sections start */}
       <Hero />
-      {/* hero sections end */}
-      {/* our story secton start */}
-      <div className="bg-[#F5EEE7] p-10 ">
-        <div className="container mx-auto">
-          <div className="hero py-[6rem] gap-x-10 bg-white px-[8rem]   grid  grid-cols-1 xl:grid-cols-2 items-center gap-y-10 xl:gap-y-0   justify-items-center">
-            <div className="left">
-              <Image src={img1} height="300" width="300" alt="img" />
-            </div>
-            <div className="right  text-center">
-              <div className="top__contetn mb-5">
-                <h1 className=" text-4xl text-[#e2ae10]  font-semibold">
-                  Timothy John Salon
-                </h1>
-                <hp className=" text-sm    tracking-widest">
-                  {" "}
-                  Lorem ipsum dolor sit amet.
-                </hp>
-              </div>
-              <p className="  text-gray-600 md:px-10  text-sm md:text-lg">
-                {" "}
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo eos
-                ex ratione saepe, velit mollitia tempora ea voluptatibus odit
-                doloremque distinctio magnam sunt similique quisquam delectus
-                accusamus atque quas laboriosam. Incidunt sint quidem molestias,
-                quod nisi laboriosam eveniet ad et.
-              </p>
-              <button className="bg-[#e2ae10] mt-4 px-8 py-2 text-white">
-                Our Story
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* our story secton end */}
-      {/* Blog secton start */}
-      <div className="bg-[#F5EEE7] p-10">
-        <div className="container mx-auto">
-          <h1 className=" text-4xl text-[#e2ae10]  font-semibold text-center py-4">
-            The Timothy Jhon Salon Diffrence
-          </h1>
 
-          <div className=" grid mt-8  gap-x-10 gap-y-10   xl:gap-y-0 grid-cols-1 xl:grid-cols-2   justify-center   justify-items-center">
-            <div>
-              <Image
-                src={img2}
-                height="300"
-                width="300"
-                className="w-full  h-[27rem]"
-                alt="img"
-              />
-              <div className="content py-4">
-                <h4 className=" font-semibold  text-gray-800">
-                  Lorem ipsum dolor sit.
-                </h4>
-                <p className=" leading-tight pr-10">
-                  {" "}
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
-                  perferendis ratione quisquam? Facilis voluptate quod beatae
-                  dolorum itaque, nihil.
+      <section>
+        <div className="bg-[#F5EEE7] w-full pt-20">
+          <div className="container mx-auto px-4">
+            <div className=" grid grid-cols-1 gap-5 lg:grid-cols-2">
+              <div className="">
+                <p className="uppercase text-[#91765A] font-semibold tracking-[1px]">
+                  since 2006
                 </p>
-                <button className="bg-[#e2ae10]  uppercase mt-4  px-8 py-2 text-white">
-                  See Our Crew
-                </button>
-              </div>
-            </div>
-            <div>
-              <Image
-                src={img3}
-                height="300"
-                width="300"
-                className="w-full  h-[27rem]"
-                alt="img"
-              />
-              <div className="content py-4">
-                <h4 className=" font-semibold  text-gray-800">
-                  Lorem ipsum dolor sit.
-                </h4>
-                <p className=" leading-tight pr-10">
-                  {" "}
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
-                  perferendis ratione quisquam? Facilis voluptate quod beatae
-                  dolorum itaque, nihil.
+                <h3 className="text-3xl lg:text-4xl font-bold text-black">
+                  Perukar Barber Shop
+                </h3>
+                <p className="text-sm text-[#6B6E69] py-4 leading-[20px]">
+                  Come experience a unique and edgy barbershop for all your hair
+                  and beard needs. ravida haretra nuam enim mi obortis eset
+                  uctus enec accumsan eu justo alisuame amet auctor orci donec
+                  vitae vehicula risus.
                 </p>
-                <button className=" bg-[#e2ae10] uppercase mt-4 px-8 py-2 text-white">
-                  See Our Crew
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* Blog secton end */}
-      {/* Map secton start */}
-      <div className="" style={{ height: "25rem", width: "100%" }}>
-        <GoogleMapReact
-          bootstrapURLKeys={{ key: "" }}
-          defaultCenter={defaultProps.center}
-          defaultZoom={defaultProps.zoom}
-        >
-          <AnyReactComponent lat={59.955413} lng={30.337844} text="My Marker" />
-        </GoogleMapReact>
-      </div>
-      {/* Map secton end */}
-      {/* conttact secton start */}
-      {/* <div className="bg-[#000] ">
-        <div className="container mx-auto">
-          <div className=" grid grid-cols-1 gap-x-8 xl:grid-cols-2">
-            <div>
-              <form>
-                <div className="py-10">
-                  <Input
-                    variant="standard"
-                    label="Name"
-                    className="   text-black "
-                  />
-                  <Input
-                    variant="standard"
-                    label="Email"
-                    className="mb-2  text-black "
-                  />
-                  <Input
-                    variant="standard"
-                    label="Phone Number"
-                    className="mb-2 text-black"
-                  />
-                  <Textarea
-                    variant="standard"
-                    label="Comments"
-                    className="  mt-5"
-                  />
+                <p className="text-sm text-[#6B6E69] leading-[20px]">
+                  Barber utate ons amet ravida haretra nuam the duru miss uctus
+                  the drana accumsan justo aliquam sit amet auctor orci done
+                  vitae risus duise nisan sapien silver on the accumsan id
+                  mauris apien.
+                </p>
+                <div className="py-5 space-y-2">
+                  <div className="flex items-center gap-2 text-[#6B6E69]">
+                    <GiCheckMark className="text-sm" />
+                    <p className="text-sm">
+                      We&apos;re professional and certified barbers
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-2 text-[#6B6E69]">
+                    <GiCheckMark className="text-sm" />
+                    <p className="text-sm">
+                      We use quality products to make you look perfect
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-2 text-[#6B6E69]">
+                    <GiCheckMark className="text-sm" />
+                    <p className="text-sm">
+                      We care about our customers satisfaction
+                    </p>
+                  </div>
                 </div>
-              </form>
+              </div>
+              <div className="grid grid-cols-2 gap-5 py-5">
+                <div className="mt-28">
+                  <Image src={about_img_2} alt="about_image" />
+                </div>
+
+                <div>
+                  <Image src={about_img_1} alt="about_image" />
+                </div>
+              </div>
             </div>
-            <div className="bg-white"></div>
+            <div className="py-20">
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:gap-6">
+                <div className="flex gap-5">
+                  <div>
+                    <IoIosCut className="text-[#AA947D] text-5xl" />
+                  </div>
+                  <div>
+                    <h4 className="text-black font-bold text-3xl">Cuts</h4>
+                    <p className="text-sm text-[#6B6E69] py-2 leading-[23px]">
+                      Cuts ut nisl quam nestibulum drana odio elementum sceisue
+                      the can golden varius the dis monte.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex gap-5">
+                  <div>
+                    <IoIosCut className="text-[#AA947D] text-5xl" />
+                  </div>
+                  <div>
+                    <h4 className="text-black font-bold text-3xl">Fades</h4>
+                    <p className="text-sm text-[#6B6E69] py-2 leading-[23px]">
+                      Fades ut nisl quam nestibulum drana odio elementum sceisue
+                      the can golden varius the dis monte.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex gap-5">
+                  <div>
+                    <IoIosCut className="text-[#AA947D] text-5xl" />
+                  </div>
+                  <div>
+                    <h4 className="text-black font-bold text-3xl">Shaves</h4>
+                    <p className="text-sm text-[#6B6E69] py-2 leading-[23px]">
+                      Shaves ut nisl quam nestibulum drana odio elementum
+                      sceisue the can golden varius the dis monte.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div> */}
-      {/* Contaact secton end */}
+      </section>
     </section>
   );
 }

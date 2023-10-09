@@ -14,7 +14,7 @@ function Choose() {
   };
 
   return (
-    <section className="bg-[#F5EEE7] h-full py-5">
+    <section className="bg-[#F5EEE7] h-full ">
       <div className="about_bg_img w-full py-40 ">
         <div className="container mx-auto px-4">
           <div className="text-white text-center">
@@ -27,7 +27,7 @@ function Choose() {
 
       {/* daynamic content  */}
 
-      <div className=" container mx-auto py-8">
+      <div className=" container mx-auto py-10">
         <div className=" md:grid-cols-2 gap-x-10 grid grid-cols-1">
           <div className="mt-5">
             <TabsNav />

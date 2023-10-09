@@ -39,9 +39,12 @@ import {
 function Services() {
   return (
     <section>
-      <div className="service_bg_img w-full py-40  brightness-50">
+      <div className="about_bg_img w-full py-40 ">
         <div className="container mx-auto px-4">
           <div className="text-white text-center">
+            <p className="uppercase font-semibold text-lg lg:text-xl">
+              our service
+            </p>
             <h2 className="text-4xl md:text-6xl font-bold py-2  lg:py-4 tracking-[1px]">
               Service
             </h2>

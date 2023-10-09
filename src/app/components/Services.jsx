@@ -39,7 +39,7 @@ import {
 function Services() {
   return (
     <section>
-      <div className="about_bg_im w-full py-40 ">
+      <div className="about_bg_img w-full py-40 ">
         <div className="container mx-auto px-4">
           <div className="text-white text-center">
             <p className="uppercase font-semibold text-lg lg:text-xl">

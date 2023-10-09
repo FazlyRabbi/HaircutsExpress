@@ -22,13 +22,13 @@ const defaultProps = {
 
 function Home() {
   return (
-    <section>
-      <Header />
+    <section className="  relative">
+      <Header/>
       {/* hero sections start */}
       <Hero />
       {/* hero sections end */}
       {/* our story secton start */}
-      <div className="bg-[#F5EEE7] p-10">
+      <div className="bg-[#F5EEE7] p-10 ">
         <div className="container mx-auto">
           <div className="hero py-[6rem] gap-x-10 bg-white px-[8rem]   grid  grid-cols-1 xl:grid-cols-2 items-center gap-y-10 xl:gap-y-0   justify-items-center">
             <div className="left">

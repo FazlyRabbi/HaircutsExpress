@@ -1,5 +1,5 @@
-"use cleint";
-import React from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import {
   Navbar,
@@ -10,9 +10,31 @@ import {
 } from "@material-tailwind/react";
 
 export default function Header() {
-
-
   const [openNav, setOpenNav] = React.useState(false);
+
+  const [scrollHeight, setScrollHeight] = useState(false);
+
+  const handleScroll = () => {
+    const currentScrollHeight = window.scrollY;
+
+    // Call your function when the scroll height reaches 300 pixels
+    if (currentScrollHeight >= 300) {
+      // Call your function here
+      setScrollHeight(true);
+    } else if (currentScrollHeight === 0) {
+      setScrollHeight(false);
+    }
+  };
+
+  useEffect(() => {
+    // Attach the event listener when the component mounts
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []); // Empty dependency array ensures that this effect runs once after the initial render
 
   React.useEffect(() => {
     window.addEventListener(
@@ -26,123 +48,122 @@ export default function Header() {
       <Typography
         as="li"
         variant="small"
-        color="white"
-        className="p-1 font-normal"
+        color="blue-gray"
+        className="p-1  font-semibold     text-white"
       >
-        <Link href="/about" className="flex items-center uppercase font-bold">
-          About Us
-        </Link>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="white"
-        className="p-1 font-normal "
-      >
-        <Link href="/service" className="flex items-center uppercase font-bold">
+        <Link
+          href="/service"
+          className="flex   hover:text-[#91765a] items-center"
+        >
           Service
         </Link>
       </Typography>
+
       <Typography
         as="li"
         variant="small"
-        color="white"
-        className="p-1 font-normal "
+        color="blue-gray"
+        className="p-1  font-semibold     text-white"
       >
-        <Link href="/choose" className="flex items-center uppercase font-bold">
-          Choose Our Pakages
+        <Link
+          href="/choose"
+          className="flex   hover:text-[#91765a] items-center"
+        >
+          Apoinment
         </Link>
+      </Typography>
+
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1  font-semibold     text-white"
+      >
+        <a href="/about" className="flex   hover:text-[#91765a] items-center">
+          About
+        </a>
       </Typography>
     </ul>
   );
 
   return (
-    <div className=" bg-[#14100c]">
-      <Navbar className="  mx-auto bg-[#14100c] border-none outline-none    shadow-none  rounded-none py-2 px-4 lg:px-8 lg:py-4">
-        <div className="container shan mx-auto flex items-center justify-between text-blue-gray-900">
-          <Typography
-            as="a"
-            href="#"
-            className="mr-4 cursor-pointer py-1.5  text-white font-medium"
-          >
-            <Link href={"/"} className=" font-bold">
-              Haircuts Express
-            </Link>
-          </Typography>
-          <div className="hidden lg:block">{navList}</div>
-          <div className=" space-x-5">
-            <Button
-              size="sm"
-              className="hidden    px-8 shadow-none text-black  bg-white rounded-none  lg:inline-block"
-            >
-              <span>Register</span>
-            </Button>
-            <Button
-              size="sm"
-              className="hidden   px-8 shadow-none  bg-white text-balck  rounded-none lg:inline-block"
-            >
-              <span>Login</span>
-            </Button>
-          </div>
+    <Navbar
+      className={`mx-auto shadow-none items-center max-w-full  z-50 top-0  backdrop-blur-none 
+    
+      border-t-0  border-r-0
 
-          <IconButton
-            variant="text"
-            className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
-            ripple={false}
-            onClick={() => setOpenNav(!openNav)}
-          >
-            {openNav ? (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                className="h-6 w-6"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            ) : (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            )}
-          </IconButton>
+       border-l-0
+
+        bg-opacity-100
+
+       ${scrollHeight ? " fixed bg-[#14100c]" : "absolute bg-transparent"}
+
+     border-b  border-[#ffffff1a]
+     transition-all duration-200
+    backdrop-saturate-100 rounded-none   py-2 px-4 lg:px-8 lg:py-4`}
+    >
+      <div
+        className={`container mx-auto  px-[8rem]  
+      
+      
+      ${scrollHeight ? "min-h-[50px]  " : "min-h-[70px]"}
+       flex items-center justify-between `}
+      >
+        <Typography
+          as="a"
+          href="#"
+          className="mr-4 cursor-pointer uppercase  text-white py-1.5  font-semibold"
+        >
+          HairCuts Express
+        </Typography>
+        <div className="hidden lg:block">{navList}</div>
+
+        <IconButton
+          variant="text"
+          className="ml-auto h-6 w-6  text-white text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+          ripple={false}
+          onClick={() => setOpenNav(!openNav)}
+        >
+          {openNav ? (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              className="h-6 w-6"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          ) : (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          )}
+        </IconButton>
+      </div>
+      <MobileNav open={openNav}>
+        <div className="container mx-auto">
+          {navList}
+          <Button variant="gradient" size="sm" fullWidth className="mb-2">
+            <span>Buy Now</span>
+          </Button>
         </div>
-        <MobileNav open={openNav}>
-          <div className="container mx-auto">
-            {navList}
-            <Button
-              size="sm"
-              fullWidth
-              className="mb-2 rounded-none bg-white text-balck"
-            >
-              <span>Register</span>
-            </Button>
-            <Button
-              size="sm"
-              fullWidth
-              className="mb-2 rounded-none bg-white text-balck "
-            >
-              <span>Login</span>
-            </Button>
-          </div>
-        </MobileNav>
-      </Navbar>
-    </div>
+      </MobileNav>
+    </Navbar>
   );
 }

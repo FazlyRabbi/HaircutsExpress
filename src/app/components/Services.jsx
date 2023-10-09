@@ -35,9 +35,12 @@ import {
   FaLinkedinIn,
 } from "react-icons/fa";
 
+import Header from "./Header";
+
 function Services() {
   return (
     <section>
+     
       <div className="service_bg_img  w-full py-20 md:py-40">
         <div className="container mx-auto px-4 ">
           <div className="text-center">

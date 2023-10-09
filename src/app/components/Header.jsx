@@ -79,9 +79,12 @@ export default function Header() {
         color="blue-gray"
         className="p-1  font-semibold     text-white"
       >
-        <a href="/about" className="flex   hover:text-[#91765a] items-center">
+        <Link
+          href="/about"
+          className="flex   hover:text-[#91765a] items-center"
+        >
           About
-        </a>
+        </Link>
       </Typography>
     </ul>
   );
@@ -103,7 +106,7 @@ export default function Header() {
     backdrop-saturate-100 rounded-none   py-2 px-4 lg:px-8 lg:py-4`}
     >
       <div
-        className={`container mx-auto  px-[8rem]  
+        className={`container mx-auto  xl:first-letter:px-[8rem]  
       
       
       ${scrollHeight ? "min-h-[50px]  " : "min-h-[70px]"}

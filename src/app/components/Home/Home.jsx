@@ -5,6 +5,9 @@ import Hero from "../Hero";
 import about_img_1 from "../../img/about_img_1.jpg";
 import about_img_2 from "../../img/about_img_2.jpg";
 import { GiCheckMark } from "react-icons/gi";
+import barber_img_1 from "../../img/barber_Image_1.jpg";
+import barber_img_2 from "../../img/barber_Image_2.jpg";
+import barber_img_3 from "../../img/barber_Image_3.jpg";
 import { IoIosCut } from "react-icons/io";
 import Header from "../Header";
 
@@ -69,6 +72,7 @@ function Home() {
                 </div>
               </div>
             </div>
+
             <div className="py-20">
               <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:gap-6">
                 <div className="flex gap-5">
@@ -109,6 +113,86 @@ function Home() {
                 </div>
               </div>
             </div>
+
+            <section>
+              <div className="bg-[#F5EEE7] w-full py-20">
+                <div className="container mx-auto px-4 ">
+                  <div className="text-center">
+                    <p className="uppercase text-sm font-semibold text-[#91765A]">
+                      what were offering
+                    </p>
+                    <h3 className="text-3xl text-[#14100C] font-bold">
+                      Barber Services
+                    </h3>
+                    <div className="py-10 grid grid-cols-1 gap-20 md:gap-4 md:grid-cols-3 lg:gap-10">
+                      <div className="border-b-2 border-[#6B6E69] hover:border-[#9e682f] transition-all duration-200">
+                        <div className=" flex justify-center relative bg-cover bg-no-repeat overflow-hidden ">
+                          <Image
+                            src={barber_img_1}
+                            alt="barber_image"
+                            height={400}
+                            width={400}
+                            className="w-full bg-cover hover:scale-110 ease-in-out transition-all duration-300"
+                          />
+                        </div>
+                        <h2 className="text-black font-bold text-2xl py-4">
+                          Hair Cut
+                        </h2>
+                        <p className="px-16 text-center md:px-0 ">
+                          Hair cut amet ravida haretra nuam the drana miss uctus
+                          enec accumsan.
+                        </p>
+                        <p className="text-4xl py-4 font-semibold text-[#9e682f]">
+                          $30
+                        </p>
+                      </div>
+                      <div className="border-b-2 border-[#6B6E69] hover:border-[#e07503] transition-all duration-200">
+                        <div className=" flex justify-center relative bg-cover bg-no-repeat overflow-hidden ">
+                          <Image
+                            src={barber_img_2}
+                            alt="barber_image"
+                            height={400}
+                            width={400}
+                            className="w-full bg-cover hover:scale-110 ease-in-out transition-all duration-300"
+                          />
+                        </div>
+                        <h2 className="text-black font-bold text-2xl py-4">
+                          Beard Trim
+                        </h2>
+                        <p className="px-16 text-center md:px-0">
+                          Shaves ons amet ravida haretra nuam the drana miss
+                          uctus enec accumsan.
+                        </p>
+                        <p className="text-4xl py-4 font-semibold text-[#9e682f]">
+                          $20
+                        </p>
+                      </div>
+                      <div className="border-b-2 border-[#6B6E69] hover:border-[#e07503] transition-all duration-200">
+                        <div className=" flex justify-center relative bg-cover bg-no-repeat overflow-hidden ">
+                          <Image
+                            src={barber_img_3}
+                            alt="barber_image"
+                            height={400}
+                            width={400}
+                            className="w-full bg-cover hover:scale-110 ease-in-out transition-all duration-300"
+                          />
+                        </div>
+                        <h2 className="text-black font-bold text-2xl py-4">
+                          Hair Wash
+                        </h2>
+                        <p className="px-16 text-center md:px-0">
+                          Hair wash amet ravida haretra nuam the drana miss
+                          uctus enec accumsan.
+                        </p>
+                        <p className="text-4xl py-4 font-semibold text-[#9e682f]">
+                          $15
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
           </div>
         </div>
       </section>

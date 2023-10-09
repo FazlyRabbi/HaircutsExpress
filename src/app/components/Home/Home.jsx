@@ -193,6 +193,89 @@ function Home() {
                 </div>
               </div>
             </section>
+
+            {/* ================================= */}
+            <section>
+              <div className="bg-[#F5EEE7] w-full py-10">
+                <div className="container mx-auto px-4">
+                  <div className="text-center pb-5">
+                    <p className="font-semibold lg:text-lg text-[#91765A]">
+                      our services
+                    </p>
+                    <h2 className="text-4xl lg:text-5xl font-bold text-[#14100C]">
+                      We Also Offer
+                    </h2>
+                  </div>
+                  <div className="py-10 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+                    <div className="bg-white text-center w-full py-10 shadow-lg rounded-lg text-[#14100C] hover:text-[#91765A] transition-all duration-300">
+                      <div className="flex flex-col gap-3  items-center">
+                        <IoIosCut className="text-5xl text-[#91765A]" />
+                        <h3 className="text-3xl font-bold">Moustache Trim</h3>
+                        <p className="text-center px-10 text-[#6B6E69]">
+                          Lorem vulputate nassa ons ame racida haretra nuam the
+                          darnaa miss uctis ence accumsan aliquam sit sapien.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="bg-white text-center w-full py-10 shadow-lg rounded-lg text-[#14100C] hover:text-[#91765A] transition-all duration-300">
+                      <div className="flex flex-col gap-3  items-center">
+                        <IoIosCut className="text-5xl text-[#91765A]" />
+                        <h3 className="text-3xl font-bold">Face Shave</h3>
+                        <p className="text-center px-10 text-[#6B6E69]">
+                          Lorem vulputate nassa ons ame racida haretra nuam the
+                          darnaa miss uctis ence accumsan aliquam sit sapien.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="bg-white text-center w-full py-10 shadow-lg rounded-lg text-[#14100C] hover:text-[#91765A] transition-all duration-300">
+                      <div className="flex flex-col gap-3  items-center">
+                        <IoIosCut className="text-5xl text-[#91765A]" />
+                        <h3 className="text-3xl font-bold">Beard Trim</h3>
+                        <p className="text-center px-10 text-[#6B6E69]">
+                          Lorem vulputate nassa ons ame racida haretra nuam the
+                          darnaa miss uctis ence accumsan aliquam sit sapien.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="bg-white text-center w-full py-10 shadow-lg rounded-lg text-[#14100C] hover:text-[#91765A] transition-all duration-300">
+                      <div className="flex flex-col gap-3  items-center">
+                        <IoIosCut className="text-5xl text-[#91765A]" />
+                        <h3 className="text-3xl font-bold">Haircut</h3>
+                        <p className="text-center px-10 text-[#6B6E69]">
+                          Lorem vulputate nassa ons ame racida haretra nuam the
+                          darnaa miss uctis ence accumsan aliquam sit sapien.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="bg-white text-center w-full py-10 shadow-lg rounded-lg text-[#14100C] hover:text-[#91765A] transition-all duration-300">
+                      <div className="flex flex-col gap-3  items-center">
+                        <IoIosCut className="text-5xl text-[#91765A]" />
+                        <h3 className="text-3xl font-bold">Clipper Cut</h3>
+                        <p className="text-center px-10 text-[#6B6E69]">
+                          Lorem vulputate nassa ons ame racida haretra nuam the
+                          darnaa miss uctis ence accumsan aliquam sit sapien.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="bg-white text-center w-full py-10 shadow-lg rounded-lg text-[#14100C] hover:text-[#91765A] transition-all duration-300">
+                      <div className="flex flex-col gap-3  items-center">
+                        <IoIosCut className="text-5xl text-[#91765A]" />
+                        <h3 className="text-3xl font-bold">Facial & Massage</h3>
+                        <p className="text-center px-10 text-[#6B6E69]">
+                          Lorem vulputate nassa ons ame racida haretra nuam the
+                          darnaa miss uctis ence accumsan aliquam sit sapien.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
           </div>
         </div>
       </section>

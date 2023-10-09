@@ -55,7 +55,22 @@ export default function Header() {
           href="/"
           className="flex   hover:text-[#c9ab8c] items-center"
         >
-          Home
+   Home
+        </Link>
+      </Typography>
+      <Typography
+        as="li"
+     
+        color="blue-gray"
+        className="p-1  font-bold   text-[1rem]   text-white"
+      >
+        <Link
+          href="/"
+          className="flex   hover:text-[#c9ab8c] items-center"
+        >
+          
+          
+          Gallery
         </Link>
       </Typography>
       <Typography

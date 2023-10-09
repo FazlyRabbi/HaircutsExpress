@@ -4,7 +4,7 @@
 
 
 .bg_img{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.61), rgba(0, 0, 0, 0.61)), url(./img/2.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(./img/hero.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

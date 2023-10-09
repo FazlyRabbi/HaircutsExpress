@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import hair_img from "../img/hair_img.png";
-import logo from "../img/black-logo.png"
+import logo from "../img/black-logo.png";
 import services_img_1 from "../img/services_img_1.jpg";
 import services_img_2 from "../img/services_img_2.jpg";
 import services_img_3 from "../img/services_img_3.jpg";
@@ -29,16 +29,16 @@ import services_small_img_10 from "../img/services_small_img_10.jpg";
 import services_small_img_11 from "../img/services_small_img_11.jpg";
 import services_small_img_12 from "../img/services_small_img_12.jpg";
 import {
-    FaFacebookF,
-    FaTwitter,
-    FaInstagram,
-    FaLinkedinIn,
-  } from "react-icons/fa";
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedinIn,
+} from "react-icons/fa";
 
 function Services() {
   return (
     <section>
-      <div className="service_bg_img w-full py-20 md:py-40">
+      <div className="service_bg_img  w-full py-20 md:py-40">
         <div className="container mx-auto px-4 ">
           <div className="text-center">
             <h2 className="uppercase font-semibold text-4xl md:text-6xl tracking-[2px]">
@@ -49,7 +49,7 @@ function Services() {
       </div>
       {/* ============== Service section content start =============== */}
 
-      <div className="bg-white w-full">
+      <div className="bg-[#F5EEE7] w-full">
         <div className="mx-auto">
           <div className=" md:px-0 lg:px-0">
             {/* content 1 start here */}
@@ -560,41 +560,46 @@ function Services() {
         </div>
       </div>
       {/* =============== Footer section start =========================== */}
-      <div className="container mx-auto px-4 py-10">
+      <div className=" bg-[#14100C]">
+        <div className="container mx-auto px-4 py-10 ">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-          <div>
+            <div>
               <div>
-                <Image
-                 src={logo} 
-                 alt="footerlogo"
-                 height={200}
-                 width={170} 
-                 />
+                <h1 className=" text-2xl text-white font-semibold ">
+                  Hairecutes Express llc
+                </h1>
               </div>
-              <p className="text-[#979595] text-sm py-4">
-              Looking for a great haircut in Queens NY, but not sure exactly what you want? We will listen to your ideas and come up with a solution for your hair that you will feel proud off! Confidence is what keeps our clients coming back. Plus, we can also complement your cut with a rich, beautiful hair color, highlights, or makeup.
+              <p className="text-[#aba59f] text-sm py-4">
+                Looking for a great haircut in Queens NY, but not sure exactly
+                what you want? We will listen to your ideas and come up with a
+                solution for your hair that you will feel proud off! Confidence
+                is what keeps our clients coming back. Plus, we can also
+                complement your cut with a rich, beautiful hair color,
+                highlights, or makeup.
               </p>
               <div className="flex items-center gap-3 py-2">
-                <Link href="#" className="p-1 pr-3 border-r-2 border-[#AFAAA9]">
-                  <FaFacebookF className="text-black hover:text-[#C59D5F] text-[1.1rem]  transition-all duration-200" />
+                <Link href="#" className="p-1 pr-3 ">
+                  <FaFacebookF className=" text-[#91765a] hover:text-[#C59D5F] text-[1.1rem]  transition-all duration-200" />
                 </Link>
-                <Link href="#" className="p-1 pr-3 border-r-2 border-[#AFAAA9]">
-                  <FaTwitter className="text-black hover:text-[#C59D5F] text-[1.1rem]  transition-all duration-200" />
+                <Link href="#" className="p-1 pr-3 ">
+                  <FaTwitter className=" text-[#91765a] hover:text-[#C59D5F] text-[1.1rem]  transition-all duration-200" />
                 </Link>
-                <Link href="#" className="p-1 pr-3 border-r-2 border-[#AFAAA9]">
-                  <FaInstagram className="text-black hover:text-[#C59D5F] text-[1.1rem]  transition-all duration-200" />
+                <Link href="#" className="p-1 pr-3 ">
+                  <FaInstagram className=" text-[#91765a] hover:text-[#C59D5F] text-[1.1rem]  transition-all duration-200" />
                 </Link>
                 <Link href="#" className="p-1">
-                  <FaLinkedinIn className="text-black hover:text-[#C59D5F] text-[1.1rem]  transition-all duration-200" />
+                  <FaLinkedinIn className=" text-[#91765a] hover:text-[#C59D5F] text-[1.1rem]  transition-all duration-200" />
                 </Link>
               </div>
             </div>
-            <div className="text-black">
-              <h3 className="uppercase text-2xl">contact info</h3>
+            <div className="">
+              <h3 className="uppercase text-2xl  font-semibold text-white">
+                contact info
+              </h3>
               <div className="py-4">
                 <Link
                   href={"#"}
-                  className="text-sm text-[#3b3a3a] hover:text-[#C59D5F] transition-all duration-200"
+                  className="text-sm  hover:text-[#C59D5F] transition-all duration-200  text-[#aba59f]"
                 >
                   6 West Broadway, New York,
                   <br />
@@ -604,7 +609,7 @@ function Services() {
               <div className="">
                 <Link
                   href={"#"}
-                  className="text-sm text-[#3b3a3a]hover:text-[#C59D5F] transition-all duration-200"
+                  className="text-sm text-[#aba59f] hover:text-[#C59D5F] transition-all duration-200"
                 >
                   ingo@example.com
                 </Link>
@@ -617,16 +622,26 @@ function Services() {
               </Link>
             </div>
             <div className="text-black">
-              <h3 className="uppercase text-2xl">SUBSCRIBE</h3>
+              <h3 className="uppercase text-2xl  text-white">SUBSCRIBE</h3>
               <div className="py-4">
-                <input type="email" placeholder="Email" className="text-lg border-2 w-full py-2 px-5 text-black placeholder-[#272626] focus:outline-none"/>
+                <input
+                  type="email"
+                  placeholder="Email"
+                  className="text-lg border-2 w-full py-2 px-5 text-black placeholder-[#272626] focus:outline-none"
+                />
                 <button
-                 type="submit" 
-                 className="mt-4 text-sm py-1 px-4 border-[1px] border-[#E2AE10] bg-[#E2AE10] hover:bg-white text-white  hover:text-black transition-all duration-200 ">Subscribe</button>
+                  type="submit"
+                  className="mt-4 text-sm py-1 px-4 border-[1px] border-[#E2AE10] bg-[#91765a] hover:bg-white text-white  hover:text-black transition-all duration-200 "
+                >
+                  Subscribe
+                </button>
               </div>
-              <p className="text-sm text-[#979595]">*Be the first to know about offers</p>
-           </div>
+              <p className="text-sm text-[#979595]">
+                *Be the first to know about offers
+              </p>
+            </div>
           </div>
+        </div>
       </div>
     </section>
   );

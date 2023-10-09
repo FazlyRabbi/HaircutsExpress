@@ -1,11 +1,12 @@
 import React from "react";
 import Link from "next/link";
 import { BsDot } from "react-icons/bs";
+import hero from "../img/2.jpg"
 
 function Hero() {
   return (
     <section>
-      <div className="w-full bg_img py-20">
+      <div className="w-full bg_img py-[10rem]">
         <div className="container mx-auto px-4">
           <div className="text-white text-center">
             <h3 className="italic font-thin text-[3rem] md:text-[4rem] lg:text-[7rem] blur-[1px]">
@@ -29,7 +30,7 @@ function Hero() {
         </div>
       </div>
       {/* ======================================= */}
-      <div className="bg-[#282828] w-full py-20">
+      {/* <div className="bg-[#282828] w-full py-20">
         <div className="container mx-auto">
           <div className="text-white text-center">
             <p className="italic text-6xl md:text-8xl lg:text-9xl text-[#C59D5F] brightness-50">
@@ -64,7 +65,7 @@ function Hero() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* 
         ======================================= */}
     </section>

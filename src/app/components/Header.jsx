@@ -10,6 +10,8 @@ import {
 } from "@material-tailwind/react";
 
 export default function Header() {
+
+
   const [openNav, setOpenNav] = React.useState(false);
 
   React.useEffect(() => {
@@ -27,9 +29,9 @@ export default function Header() {
         color="white"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center uppercase font-bold">
+        <Link href="/about" className="flex items-center uppercase font-bold">
           About Us
-        </a>
+        </Link>
       </Typography>
       <Typography
         as="li"
@@ -55,27 +57,29 @@ export default function Header() {
   );
 
   return (
-    <div className=" bg-black">
-      <Navbar className="mx-auto bg-black border-none outline-none    shadow-none  rounded-none py-2 px-4 lg:px-8 lg:py-4">
+    <div className=" bg-[#14100c]">
+      <Navbar className="  mx-auto bg-[#14100c] border-none outline-none    shadow-none  rounded-none py-2 px-4 lg:px-8 lg:py-4">
         <div className="container shan mx-auto flex items-center justify-between text-blue-gray-900">
           <Typography
             as="a"
             href="#"
             className="mr-4 cursor-pointer py-1.5  text-white font-medium"
           >
-            <Link href={"/"} className=" font-bold">Haircuts Express</Link>
+            <Link href={"/"} className=" font-bold">
+              Haircuts Express
+            </Link>
           </Typography>
           <div className="hidden lg:block">{navList}</div>
           <div className=" space-x-5">
             <Button
               size="sm"
-              className="hidden    px-8 shadow-none bg-[#e2ae10]  rounded-none  lg:inline-block"
+              className="hidden    px-8 shadow-none text-black  bg-white rounded-none  lg:inline-block"
             >
               <span>Register</span>
             </Button>
             <Button
               size="sm"
-              className="hidden   px-8 shadow-none  bg-[#e2ae10]  rounded-none lg:inline-block"
+              className="hidden   px-8 shadow-none  bg-white text-balck  rounded-none lg:inline-block"
             >
               <span>Login</span>
             </Button>
@@ -125,14 +129,14 @@ export default function Header() {
             <Button
               size="sm"
               fullWidth
-              className="mb-2 rounded-none bg-[#e2ae10]"
+              className="mb-2 rounded-none bg-white text-balck"
             >
               <span>Register</span>
             </Button>
             <Button
               size="sm"
               fullWidth
-              className="mb-2 rounded-none bg-[#e2ae10]"
+              className="mb-2 rounded-none bg-white text-balck "
             >
               <span>Login</span>
             </Button>

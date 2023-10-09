@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-
+import Hero from "../Hero";
 import img1 from "../../img/img1.jpg";
 import img2 from "../../img/img2.jpg";
 import img3 from "../../img/img3.jpg";
@@ -19,21 +19,16 @@ const defaultProps = {
   zoom: 11,
 };
 
+
 function Home() {
   return (
     <section>
       <Header />
       {/* hero sections start */}
-      <div className="bg-gray-300">
-        <div className="container mx-auto">
-          <div className="hero py-[10rem] px-2">
-            <p>hero sections</p>
-          </div>
-        </div>
-      </div>
+      <Hero />
       {/* hero sections end */}
       {/* our story secton start */}
-      <div className="bg-[#587482] p-10">
+      <div className="bg-[#F5EEE7] p-10">
         <div className="container mx-auto">
           <div className="hero py-[6rem] gap-x-10 bg-white px-[8rem]   grid  grid-cols-1 xl:grid-cols-2 items-center gap-y-10 xl:gap-y-0   justify-items-center">
             <div className="left">
@@ -66,7 +61,7 @@ function Home() {
       </div>
       {/* our story secton end */}
       {/* Blog secton start */}
-      <div className="bg-[#fff] p-10">
+      <div className="bg-[#F5EEE7] p-10">
         <div className="container mx-auto">
           <h1 className=" text-4xl text-[#e2ae10]  font-semibold text-center py-4">
             The Timothy Jhon Salon Diffrence

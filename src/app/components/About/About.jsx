@@ -55,7 +55,7 @@ export default function About() {
                   <div className="flex items-center gap-2 text-[#6B6E69]">
                     <GiCheckMark className="text-sm" />
                     <p className="text-sm">
-                      We're professional and certified barbers
+                      We &apos;re professional and certified barbers
                     </p>
                   </div>
                   <div className="flex items-center gap-2 text-[#6B6E69]">

@@ -4,13 +4,27 @@
 
 
 .bg_img{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(./img/hero.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(./img/hero.jpg);
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(./img/image.); */
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    background-attachment: fixed;
+   
 }
+
+.footerTop{
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./img/apoinment.jpg);
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(./img/image.); */
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+
 .bg_img2{
     background-image: url(./img/2.jpg);
     background-position: center;

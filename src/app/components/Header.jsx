@@ -10,6 +10,7 @@ import {
 } from "@material-tailwind/react";
 
 export default function Header() {
+
   const [openNav, setOpenNav] = React.useState(false);
 
   const [scrollHeight, setScrollHeight] = useState(false);
@@ -132,7 +133,7 @@ export default function Header() {
 
   return (
     <Navbar
-      className={`mx-auto shadow-none items-center max-w-full  z-50 top-0  backdrop-blur-none 
+      className={`mx-auto    shadow-none items-center max-w-full  z-50 top-0  backdrop-blur-none 
     
       border-t-0  border-r-0
 
@@ -140,7 +141,7 @@ export default function Header() {
 
         bg-opacity-100
 
-       ${scrollHeight ? " fixed bg-[#14100c]" : "absolute bg-transparent"}
+       ${scrollHeight ? " fixed bg-[#14100c]" : "absolute bg-[#00000098]"}
 
      border-b  border-[#ffffff1a]
      transition-all duration-200

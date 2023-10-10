@@ -9,7 +9,9 @@ import barber_img_1 from "../../img/barber_Image_1.jpg";
 import barber_img_2 from "../../img/barber_Image_2.jpg";
 import barber_img_3 from "../../img/barber_Image_3.jpg";
 import { IoIosCut } from "react-icons/io";
+import { BiKnife } from "react-icons/bi";
 import Header from "../Header";
+import Footer from "../Footer";
 
 function Home() {
   return (
@@ -279,6 +281,87 @@ function Home() {
           </div>
         </div>
       </section>
+
+      {/* ======footer top secton===== */}
+
+      <section className=" footerTop py-[6rem]">
+        <div className=" container mx-auto  px-[8rem] ">
+          <div className=" grid   gap-y-10 md:gap-y-0 md:grid-cols-2 items-center gap-x-10 ">
+            <div className="content  ">
+              <h1 className=" text-white text-2xl  font-bold">
+                We Are Best Barbers
+              </h1>
+              <h1 className=" text-white text-2xl  font-bold">
+                & Hair Cutting Salon
+              </h1>
+              <h1 className=" text-white text-2xl  font-bold">at NYC.</h1>
+
+              <div className="mt-10">
+                <div className="flex items-center space-x-2">
+                  <BiKnife className=" text-[#86765A] text-6xl" />
+                  <div>
+                    <h3 className=" uppercase text-sm text-[#86765A] font-semibold">
+                      Appointemnt
+                    </h3>
+                    <h3 className=" text-2xl  text-white font-bold ">
+                      212-308-3838
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className=" bg-[#F5EEE7] p-8 py-12 card max-w-[30rem]">
+              <div>
+                <h1 className=" font-bold  text-2xl text-black text-center">
+                  Make An Appointment
+                </h1>
+
+                <form>
+                  <div className="grid grid-cols-2 gap-x-4">
+                    <input
+                      type="text"
+                      className=" bg-[#FFFFFF]  mt-4  placeholder:text-black focus-within:outline-none py-4 px-6"
+                      placeholder="Name"
+                    />
+                    <input
+                      type="number"
+                      className=" bg-[#FFFFFF]  mt-4  placeholder:text-black focus-within:outline-none py-4 px-6"
+                      placeholder="Phone"
+                    />
+                    <input
+                      type="date"
+                      className=" bg-[#FFFFFF]  mt-4  placeholder:text-black focus-within:outline-none py-4 px-6"
+                      placeholder="Phone"
+                    />
+                    <input
+                      type="time"
+                      className=" bg-[#FFFFFF]  mt-4  placeholder:text-black focus-within:outline-none py-4 px-6"
+                      placeholder="Phone"
+                    />
+                    <select className=" bg-[#FFFFFF]  mt-4  placeholder:text-black focus-within:outline-none py-4 px-6">
+                      <option value="option1">Option 1</option>
+                      <option value="option2">Option 2</option>
+                      <option value="option3">Option 3</option>
+                    </select>
+                    <select className=" bg-[#FFFFFF]  mt-4  placeholder:text-black focus-within:outline-none py-4 px-6">
+                      <option value="option1">Option 1</option>
+                      <option value="option2">Option 2</option>
+                      <option value="option3">Option 3</option>
+                    </select>
+                  </div>
+
+                  <button className=" mt-8 hover:bg-[#000] bg-[#91765A] text-white font-semibold  w-full p-4">
+                    Make Appointment
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <Footer />
+      {/* ======footer top secton===== */}
     </section>
   );
 }

@@ -26,10 +26,10 @@ function Home() {
             <div className=" grid grid-cols-1 gap-5 lg:grid-cols-2">
               <div className="">
                 <p className="uppercase text-[#91765A] font-semibold tracking-[1px]">
-                  since 2006
+                All Walk -ins Welcome
                 </p>
                 <h3 className="text-3xl lg:text-4xl font-bold text-black">
-                  Perukar Barber Shop
+                  Haircuts Barber Shop
                 </h3>
                 <p className="text-sm text-[#6B6E69] py-4 leading-[20px]">
                   Come experience a unique and edgy barbershop for all your hair
@@ -304,7 +304,7 @@ function Home() {
                       Appointemnt
                     </h3>
                     <h3 className=" text-2xl  text-white font-bold ">
-                      212-308-3838
+                    516.490.1330
                     </h3>
                   </div>
                 </div>

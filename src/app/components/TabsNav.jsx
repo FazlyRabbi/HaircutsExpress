@@ -17,10 +17,10 @@ export function TabsNav() {
       desc: (
         <>
           <ul className=" flex flex-col space-y-6">
-            <li>Supercut</li>
-            <li>Supercut With Shampoo</li>
-            <li>Supercut Jr.</li>
-            <li>Supercut Sr</li>
+            <li>Haircuts Express</li>
+            <li>Haircuts Express With Shampoo</li>
+            <li>Haircuts Express Jr.</li>
+            <li>Haircuts Express Sr</li>
             <li>Beard</li>
             <li>** See your stylist for exact pricing</li>
           </ul>

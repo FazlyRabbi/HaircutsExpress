@@ -56,7 +56,7 @@ function Choose() {
                       >
                         Add
                       </Button>
-                      <p className=" text-gray-800 font-semibold">Supercut</p>
+                      <p className=" text-gray-800 font-semibold">Haircuts Express</p>
                     </li>
                     <li className=" mb-8 flex cursor-pointer space-x-5 items-center">
                       <Button
@@ -68,7 +68,7 @@ function Choose() {
                         Add
                       </Button>
                       <p className=" text-gray-800 font-semibold">
-                        Supercut With Shampoo
+                        Haircuts Express With Shampoo
                       </p>
                     </li>
                     <li className=" mb-8 flex cursor-pointer space-x-5 items-center">
@@ -81,7 +81,7 @@ function Choose() {
                         Add
                       </Button>
                       <p className=" text-gray-800 font-semibold">
-                        Supercut Jr.
+                        Haircuts Express Jr.
                       </p>
                     </li>
                     <li className=" mb-8 flex cursor-pointer space-x-5 items-center">
@@ -94,7 +94,7 @@ function Choose() {
                         Add
                       </Button>
                       <p className=" text-gray-800 font-semibold">
-                        Supercut Sr.
+                        Haircuts Express Sr.
                       </p>
                     </li>
                   </ul>
@@ -114,7 +114,7 @@ function Choose() {
                       >
                         Beard
                       </Button>
-                      <p className=" text-gray-800 font-semibold">Supercut</p>
+                      <p className=" text-gray-800 font-semibold">Haircuts Express</p>
                     </li>
                   </ul>
                 </div>
@@ -122,7 +122,7 @@ function Choose() {
             ) : (
               <div>
                 <h1 className="  font-semibold text-2xl">Servies</h1>
-                <p className="my-5">Supercut Jr</p>
+                <p className="my-5">Haircuts Express Jr</p>
                 <Button
                   size="sm"
                   onClick={() => handlePrev()}

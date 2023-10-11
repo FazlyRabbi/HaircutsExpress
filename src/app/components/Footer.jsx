@@ -49,18 +49,22 @@ function Footer() {
             </h3>
             <div className="py-4"></div>
             <div className="">
+              <p className="text-sm text-[#aba59f] hover:text-[#C59D5F] transition-all duration-200">
+                3330 Hillsside Ave, New Hide Park, NY 11040
+              </p>
+
               <Link
                 href={"#"}
                 className="text-sm text-[#aba59f] hover:text-[#C59D5F] transition-all duration-200"
               >
-                ingo@haircutexpress.com
+                services@haircutexpressllc.com
               </Link>
             </div>
             <Link
               href={"#"}
               className="text-sm text-[#979595] hover:text-[#C59D5F] transition-all duration-200"
             >
-              (917)855-8530
+              516.490.1330
             </Link>
           </div>
           <div className="text-black">

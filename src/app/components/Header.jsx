@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   Navbar,
   MobileNav,
@@ -8,9 +9,9 @@ import {
   Button,
   IconButton,
 } from "@material-tailwind/react";
+import logo from "../../app/img/logo.png";
 
 export default function Header() {
-
   const [openNav, setOpenNav] = React.useState(false);
 
   const [scrollHeight, setScrollHeight] = useState(false);
@@ -48,29 +49,19 @@ export default function Header() {
     <ul className="mb-4 mt-2 flex flex-col gap-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-10">
       <Typography
         as="li"
-     
         color="blue-gray"
         className="p-1  font-bold   text-[1rem]   text-white"
       >
-        <Link
-          href="/"
-          className="flex   hover:text-[#c9ab8c] items-center"
-        >
-   Home
+        <Link href="/" className="flex   hover:text-[#c9ab8c] items-center">
+          Home
         </Link>
       </Typography>
       <Typography
         as="li"
-     
         color="blue-gray"
         className="p-1  font-bold   text-[1rem]   text-white"
       >
-        <Link
-          href="/"
-          className="flex   hover:text-[#c9ab8c] items-center"
-        >
-          
-          
+        <Link href="/" className="flex   hover:text-[#c9ab8c] items-center">
           Gallery
         </Link>
       </Typography>
@@ -155,7 +146,7 @@ export default function Header() {
        flex items-center justify-between `}
       >
         <Link href={`/`} className="block font-semibold">
-          HairCuts Express
+          <Image src={logo} height={70} width={80} alt="logo" />
         </Link>
 
         <div className="hidden lg:block">{navList}</div>
@@ -199,10 +190,7 @@ export default function Header() {
         </IconButton>
       </div>
       <MobileNav open={openNav}>
-        <div className="container mx-auto">
-          {navList}
-         
-        </div>
+        <div className="container mx-auto">{navList}</div>
       </MobileNav>
     </Navbar>
   );

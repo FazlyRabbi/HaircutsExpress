@@ -71,3 +71,11 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
+
+.contact_bg_img{
+    background-image:url(./img/banner.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

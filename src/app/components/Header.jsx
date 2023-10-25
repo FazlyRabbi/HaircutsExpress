@@ -113,7 +113,7 @@ export default function Header() {
         className="p-1  font-bold   text-[1rem]   text-white"
       >
         <Link
-          href="/about"
+          href="../contact"
           className="flex   hover:text-[#c9ab8c] items-center"
         >
           Contact

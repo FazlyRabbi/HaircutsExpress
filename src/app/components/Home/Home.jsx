@@ -26,7 +26,7 @@ function Home() {
             <div className=" grid grid-cols-1 gap-5 lg:grid-cols-2">
               <div className="">
                 <p className="uppercase text-[#91765A] font-semibold tracking-[1px]">
-                All Walk -ins Welcome
+                  All Walk -ins Welcome
                 </p>
                 <h3 className="text-3xl lg:text-4xl font-bold text-black">
                   Haircuts Barber Shop
@@ -66,11 +66,19 @@ function Home() {
               </div>
               <div className="grid grid-cols-2 gap-5 py-5">
                 <div className="mt-28">
-                  <Image src={about_img_2} alt="about_image" />
+                  <Image
+                    src={about_img_2}
+                    alt="about_image"
+                    className=" shadow-md"
+                  />
                 </div>
 
                 <div>
-                  <Image src={about_img_1} alt="about_image" />
+                  <Image
+                    src={about_img_1}
+                    alt="about_image"
+                    className=" shadow-md"
+                  />
                 </div>
               </div>
             </div>
@@ -134,7 +142,7 @@ function Home() {
                             alt="barber_image"
                             height={400}
                             width={400}
-                            className="w-full bg-cover hover:scale-110 ease-in-out transition-all duration-300"
+                            className="w-full shadow-md bg-cover hover:scale-110 ease-in-out transition-all duration-300"
                           />
                         </div>
                         <h2 className="text-black font-bold text-2xl py-4">
@@ -286,7 +294,7 @@ function Home() {
 
       <section className=" footerTop py-[6rem]">
         <div className=" container mx-auto  px-[8rem] ">
-          <div className=" grid   gap-y-10 md:gap-y-0 md:grid-cols-2 items-center gap-x-10 ">
+          <div className=" grid   gap-y-10 lg:gap-y-0 lg:grid-cols-2 items-center gap-x-10 ">
             <div className="content  ">
               <h1 className=" text-white text-2xl  font-bold">
                 We Are Best Barbers
@@ -304,7 +312,7 @@ function Home() {
                       Appointemnt
                     </h3>
                     <h3 className=" text-2xl  text-white font-bold ">
-                    516.490.1330
+                      516.490.1330
                     </h3>
                   </div>
                 </div>
@@ -313,7 +321,7 @@ function Home() {
 
             <div className=" bg-[#F5EEE7] p-8 py-12 card max-w-[30rem]">
               <div>
-                <h1 className=" font-bold  text-2xl text-black text-center">
+                <h1 className=" font-bold  md:text-2xl text-xl text-black text-center">
                   Make An Appointment
                 </h1>
 
@@ -321,22 +329,22 @@ function Home() {
                   <div className="grid grid-cols-2 gap-x-4">
                     <input
                       type="text"
-                      className=" bg-[#FFFFFF]  mt-4  placeholder:text-black focus-within:outline-none py-4 px-6"
+                      className=" bg-[#FFFFFF]  mt-4  placeholder:text-black focus-within:outline-none md:py-4 md:px-6 py-2 px-6"
                       placeholder="Name"
                     />
                     <input
                       type="number"
-                      className=" bg-[#FFFFFF]  mt-4  placeholder:text-black focus-within:outline-none py-4 px-6"
+                      className=" bg-[#FFFFFF]  mt-4  placeholder:text-black focus-within:outline-none md:py-4 md:px-6 py-2 px-6"
                       placeholder="Phone"
                     />
                     <input
                       type="date"
-                      className=" bg-[#FFFFFF]  mt-4  placeholder:text-black focus-within:outline-none py-4 px-6"
+                      className=" bg-[#FFFFFF]  mt-4  placeholder:text-black focus-within:outline-none md:py-4 md:px-6 py-2 px-6"
                       placeholder="Phone"
                     />
                     <input
                       type="time"
-                      className=" bg-[#FFFFFF]  mt-4  placeholder:text-black focus-within:outline-none py-4 px-6"
+                      className=" bg-[#FFFFFF]  mt-4  placeholder:text-black focus-within:outline-none md:py-4 md:px-6 py-2 px-6"
                       placeholder="Phone"
                     />
                     <select className=" bg-[#FFFFFF]  mt-4  placeholder:text-black focus-within:outline-none py-4 px-6">
@@ -351,7 +359,7 @@ function Home() {
                     </select>
                   </div>
 
-                  <button className=" mt-8 hover:bg-[#000] bg-[#91765A] text-white font-semibold  w-full p-4">
+                  <button className=" mt-8 hover:bg-[#000] bg-[#91765A] text-white font-semibold  w-full md:p-4 p-2">
                     Make Appointment
                   </button>
                 </form>

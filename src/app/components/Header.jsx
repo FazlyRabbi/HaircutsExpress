@@ -89,7 +89,7 @@ export default function Header() {
           href="/choose"
           className="flex   hover:text-[#c9ab8c] items-center"
         >
-          Apoinment
+         Appointment
         </Link>
       </Typography>
 

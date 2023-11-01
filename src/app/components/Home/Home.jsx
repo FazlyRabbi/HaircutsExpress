@@ -65,19 +65,19 @@ function Home() {
                 </div>
               </div>
               <div className="grid grid-cols-2 gap-5 py-5">
-                <div className="mt-28">
+                <div className="">
                   <Image
                     src={about_img_2}
                     alt="about_image"
-                    className=" shadow-md"
+                    className="custom__shadow "
                   />
                 </div>
 
-                <div>
+                <div  className="mt-28 ">
                   <Image
                     src={about_img_1}
                     alt="about_image"
-                    className=" shadow-md"
+                    className=" -ml-[3rem] "
                   />
                 </div>
               </div>
@@ -293,7 +293,7 @@ function Home() {
       {/* ======footer top secton===== */}
 
       <section className=" footerTop py-[6rem]">
-        <div className=" container mx-auto  px-[8rem] ">
+        <div className=" container mx-auto  md:px-[8rem] px-4 ">
           <div className=" grid   gap-y-10 lg:gap-y-0 lg:grid-cols-2 items-center gap-x-10 ">
             <div className="content  ">
               <h1 className=" text-white text-2xl  font-bold">
@@ -319,14 +319,14 @@ function Home() {
               </div>
             </div>
 
-            <div className=" bg-[#F5EEE7] p-8 py-12 card max-w-[30rem]">
+            <div className=" bg-[#F5EEE7] p-8 py-12 w-full card md:max-w-[30rem]">
               <div>
-                <h1 className=" font-bold  md:text-2xl text-xl text-black text-center">
+                <h1 className=" font-bold mb-4  md:text-2xl text-xl text-black text-center">
                   Make An Appointment
                 </h1>
 
                 <form>
-                  <div className="grid grid-cols-2 gap-x-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4">
                     <input
                       type="text"
                       className=" bg-[#FFFFFF]  mt-4  placeholder:text-black focus-within:outline-none md:py-4 md:px-6 py-2 px-6"
@@ -365,6 +365,7 @@ function Home() {
                 </form>
               </div>
             </div>
+            
           </div>
         </div>
       </section>

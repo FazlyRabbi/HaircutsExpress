@@ -7,139 +7,120 @@ import { LuMail } from "react-icons/lu";
 function Contactpage() {
   return (
     <section>
-      <div className="contact_bg_img w-full py-40 h-[80vh]  ">
+      <div className="about_bg_img w-full py-40 ">
         <div className="container mx-auto px-4">
-          <div className="mt-20 flex items-center justify-between lg:justify-evenly">
-            <h1 className="text-[#D6A354] font-semibold text-6xl lg:text-8xl tracking-[1px] ">
+          <div className="text-white text-center">
+            <p className="uppercase font-semibold text-lg lg:text-xl">
               Contact
-            </h1>
-            <div className="flex items-center gap-4">
-              <Link
-                href={"#"}
-                className="text-white text-2xl font-semibold hover:text-[#D6A354] transition-all duration-300"
-              >
-                Qutteer
-              </Link>
-              <p className="text-[#D6A354] text-xl">contact</p>
-            </div>
+            </p>
+            <h2 className="text-4xl md:text-6xl font-bold py-2  lg:py-4 tracking-[1px]">
+              Contact With Us
+            </h2>
           </div>
         </div>
       </div>
       {/* ============================= */}
-      <section className=" bg-white w-full py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center space-y-4">
-            <h2 className="uppercase text-[#252525] font-bold text-4xl ">
-              get in touch
-            </h2>
-            <p className="text-[#7A7A7A]">
-              Sit amet consectetur adipiscing elit sed do eiusmod tempor
-              incididunt labore dolore magna aliqua suspendisse
-            </p>
-          </div>
-          <div className="py-4 lg:py-10 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-10">
-            <div className="bg-[#EFEFEF] text-[#252525] hover:text-white hover:bg-[#D6A354] w-full p-4 transition-all duration-300">
-              <Link href={"#"}>
-                <div className="flex gap-6">
-                  <div className="flex items-center justify-center">
-                    <div className="bg-[#D6A354] p-4">
-                      <BsFillTelephoneForwardFill className="text-4xl text-white" />
-                    </div>
-                  </div>
-                  <div className="">
-                    <h3 className="text-2xl font-semibold pb-1">Phone:</h3>
-                    <p className="text-md">+555 56454 5454</p>
-                    <p className="text-md ">+555 56454 5454</p>
+      <section className=" bg-white w-full py-20 mt-5">
+        <div className="  grid grid-cols-1 lg:grid-cols-3 gap-10 container mx-auto">
+          <div className="left">
+            <div className="outContactInfo p-8  bg-[#F9F3F0]">
+              <h1 className="   text-xl  text-black  font-semibold   border-[#C28565]">
+                Our Contact Information
+              </h1>
+              <p className="my-3 text-sm text-[#6e6e6e]">
+                Have a inquiry or some feedback for us? Fill out the form below
+                to contact our team.
+              </p>
+              {/* ========Contact Card======= */}
+              <div className="mt-4 space-y-6">
+                <div className=" bg-white p-8 shadow-sm  space-x-5 flex  items-center ">
+                  <div>icon</div>
+                  <div>
+                    <h4>Our Address</h4>
+                    <p>2690 Hiltona Street Victoria Road New York, Canada</p>
                   </div>
                 </div>
-              </Link>
-            </div>
-
-            <div className="bg-[#EFEFEF] text-[#252525] hover:text-white hover:bg-[#D6A354] w-full p-4 transition-all duration-300">
-              <Link href={"#"}>
-                <div className="flex gap-6">
-                  <div className="flex items-center justify-center">
-                    <div className="bg-[#D6A354] p-4">
-                      <MdLocationOn className="text-4xl text-white" />
-                    </div>
-                  </div>
-                  <div className="">
-                    <h3 className="text-2xl font-semibold pb-1">Address:</h3>
-                    <p className="text-md ">
-                      Haltenstrase, Lugaggia. Switzerland
-                    </p>
+                <div className=" bg-white p-8 shadow-sm  space-x-5 flex  items-center ">
+                  <div>icon</div>
+                  <div>
+                    <h4>Our Address</h4>
+                    <p>2690 Hiltona Street Victoria Road New York, Canada</p>
                   </div>
                 </div>
-              </Link>
-            </div>
-
-            <div className="bg-[#EFEFEF] text-[#252525] hover:text-white hover:bg-[#D6A354] w-full p-4 transition-all duration-300">
-              <Link href={"#"}>
-                <div className="flex gap-6">
-                  <div className="flex items-center justify-center">
-                    <div className="bg-[#D6A354] p-4">
-                      <LuMail className="text-4xl text-white" />
-                    </div>
-                  </div>
-                  <div className="">
-                    <h3 className="text-2xl font-semibold pb-1">Email:</h3>
-                    <p className="text-md">no@themedraft.com</p>
-                    <p className="text-md ">replay@themedraft.com</p>
+                <div className=" bg-white p-8 shadow-sm  space-x-5 flex  items-center ">
+                  <div>icon</div>
+                  <div>
+                    <h4>Our Address</h4>
+                    <p>2690 Hiltona Street Victoria Road New York, Canada</p>
                   </div>
                 </div>
-              </Link>
+              </div>
+              {/* ============== */}
             </div>
           </div>
-          {/* calender and input section start */}
-          <div className="py-10 grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-5">
-            <div className="text-center text-5xl">Calender is here</div>
-            <div className="bg-[#D6A354] w-full p-5">
-              <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
-                <input
-                  type="text"
-                  placeholder="Name*"
-                  className="py-5 rounded-[5px] w-full text-[#252525] placeholder-[#252525] px-4 font-semibold focus:outline-none"
-                />
-                <input
-                  type="email"
-                  placeholder="Email*"
-                  className="py-5 rounded-[5px] w-full text-[#252525] placeholder-[#252525] px-5 font-semibold focus:outline-none"
-                />
-                <input
-                  type="number"
-                  placeholder="Phone*"
-                  className="py-5 rounded-[5px] w-full text-[#252525] placeholder-[#252525] px-5 font-semibold focus:outline-none"
-                />
-                <input
-                  type="text"
-                  placeholder="Hair Cut"
-                  className="py-5 rounded-[5px] w-full text-[#252525] placeholder-[#252525] px-5 font-semibold focus:outline-none"
-                />
-                <input
-                  type="date"
-                  className="lg:col-span-2 py-5 rounded-[5px] w-full text-[#252525] placeholder-[#252525] px-5 font-semibold focus:outline-none"
-                />
+          <div className="right   lg:col-span-2 overflow-hidden">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.38854235153!2d-73.66090922355048!3d40.7534782713875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c28806b73d5ebb%3A0xb96b55c0132e6479!2s3330%20Hillside%20Ave.%2C%20New%20Hyde%20Park%2C%20NY%2011040%2C%20USA!5e0!3m2!1sen!2sbd!4v1698777458603!5m2!1sen!2sbd"
+              className="w-full   grayscale fill-teal-50 h-full min-h-[35rem]"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+        </div>
+
+        {/* =====Get In Touhc ====== */}
+
+        <div className=" mt-[4rem] mb-6 custom__shadow px-[3rem] py-[4rem]  container mx-auto">
+          <div>
+            <h1 className="  text-4xl  text-center">
+              Get In Touch
+            </h1>
+
+            <div>
+              <form className="mt-5">
+                <div className="w-full overflow-hidden grid md:space-x-8 md:space-y-0 space-y-5 grid-cols-1  md:grid-cols-2">
+                  <input
+                    placeholder="Your name"
+                    type="text"
+                    className=" focus-within:outline-none placeholder:font-normal    w-full  font-normal   p-3 bg-[#F9F3F0]"
+                  />
+                  <input
+                    placeholder="Email Address"
+                    type="text"
+                    className=" focus-within:outline-none placeholder:font-normal   w-full  font-normal   p-3 bg-[#F9F3F0]"
+                  />
+                </div>
+
+                <div className="w-full mt-5 overflow-hidden grid md:space-x-8 md:space-y-0 space-y-5 grid-cols-1  md:grid-cols-2">
+                  <input
+                    placeholder="Phone Number"
+                    type="text"
+                    className=" focus-within:outline-none placeholder:font-normal    w-full  font-normal   p-3 bg-[#F9F3F0]"
+                  />
+                  <select className="bg-[#F9F3F0] p-3 focus-within:outline-none text-[#6e6e6e]">
+                    <option>hairecutt</option>
+                    <option>hairecutt</option>
+                    <option>hairecutt</option>
+                  </select>
+                </div>
+
                 <textarea
-                  name="text"
-                  placeholder="Message"
-                  cols="30"
-                  rows="5"
-                  className="lg:col-span-2 py-5 rounded-[5px] w-full text-[#252525] placeholder-[#252525] px-5 font-semibold focus:outline-none"
-                ></textarea>
-              </div>
-              <div className="flex justify-center py-5">
-                <button
-                  type="button"
-                  className="flex items-center justify-center text-white gap-2 border-2 border-white rounded-[10px] py-4 w-full hover:bg-[#252525] transition-all duration-200"
-                >
-                  <p className="text-lg">submit now</p>
-                  <BsArrowRight className="text-lg" />
+                  placeholder="Write message..."
+                  className="w-full focus-within:outline-none  p-5  mt-5 bg-[#F9F3F0]"
+                  rows={6}
+                />
+                <button className="bg-[#C28565]   mt-4 p-5 text-white w-full uppercase">
+                    send message
                 </button>
-              </div>
+              </form>
             </div>
           </div>
         </div>
+        {/* =====Get In Touhc ====== */}
       </section>
+
       {/* ================================ */}
     </section>
   );

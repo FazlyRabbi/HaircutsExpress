@@ -2,29 +2,14 @@ import { create } from "zustand";
 import axios from "axios";
 
 const useStore = create((set) => ({
-  data: null,
+  timeSlots: [],
   loading: false,
   error: null,
   category: null,
-  latest18:null,
+  latest18: null,
 
-  fetchRepo: async (page) => {
-    set({ loading: true, error: null });
-
-    try {
-      if (page === undefined) {
-        // Check if page is undefined
-        const response = await axios.get(`${process.env.API_URL}/repo`);
-        set({ data: response.data, loading: false });
-      } else {
-        const response = await axios.get(
-          `${process.env.API_URL}/repo?page=${page}`
-        );
-        set({ data: response.data, loading: false });
-      }
-    } catch (error) {
-      set({ error, loading: false });
-    }
+  setTimeSlot: async (data) => {
+    set({ timeSlots: data });
   },
 
   fetchCategory: async () => {
@@ -50,8 +35,6 @@ const useStore = create((set) => ({
       set({ error, loading: false });
     }
   },
-
-
 }));
 
 export default useStore;

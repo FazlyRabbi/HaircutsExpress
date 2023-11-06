@@ -19,10 +19,10 @@ export default function About() {
       <div className="about_bg_img w-full py-40 ">
         <div className="container mx-auto px-4">
           <div className="text-white text-center">
-            <p className="uppercase font-semibold text-lg lg:text-xl">
+            <p className="uppercase font-semibold text-lg font-co lg:text-xl">
               about us
             </p>
-            <h2 className="text-4xl md:text-6xl font-bold py-2  lg:py-4 tracking-[1px]">
+            <h2 className="text-4xl md:text-6xl font-bold py-2  font-co lg:py-4 tracking-[1px]">
               Our History
             </h2>
           </div>
@@ -34,10 +34,10 @@ export default function About() {
           <div className="container mx-auto px-4">
             <div className=" grid grid-cols-1 gap-5 lg:grid-cols-2">
               <div className="">
-                <p className="uppercase text-[#91765A] font-semibold tracking-[1px]">
+                <p className="uppercase font-co  text-[#91765A] font-semibold tracking-[1px]">
                   since 2006
                 </p>
-                <h3 className="text-3xl lg:text-4xl font-bold text-black">
+                <h3 className="text-4xl   font-co lg:text-5xl font-bold text-black">
                   Perukar Barber Shop
                 </h3>
                 <p className="text-sm text-[#6B6E69] py-4 leading-[20px]">
@@ -90,7 +90,7 @@ export default function About() {
                     <IoIosCut className="text-[#AA947D] text-5xl" />
                   </div>
                   <div>
-                    <h4 className="text-black font-bold text-3xl">Cuts</h4>
+                    <h4 className="text-black font-bold text-3xl font-co">Cuts</h4>
                     <p className="text-sm text-[#6B6E69] py-2 leading-[23px]">
                       Cuts ut nisl quam nestibulum drana odio elementum sceisue
                       the can golden varius the dis monte.
@@ -102,7 +102,7 @@ export default function About() {
                     <IoIosCut className="text-[#AA947D] text-5xl" />
                   </div>
                   <div>
-                    <h4 className="text-black font-bold text-3xl">Fades</h4>
+                    <h4 className="text-black font-bold text-3xl font-co">Fades</h4>
                     <p className="text-sm text-[#6B6E69] py-2 leading-[23px]">
                       Fades ut nisl quam nestibulum drana odio elementum sceisue
                       the can golden varius the dis monte.
@@ -114,7 +114,7 @@ export default function About() {
                     <IoIosCut className="text-[#AA947D] text-5xl" />
                   </div>
                   <div>
-                    <h4 className="text-black font-bold text-3xl">Shaves</h4>
+                    <h4 className="text-black font-bold text-3xl font-co">Shaves</h4>
                     <p className="text-sm text-[#6B6E69] py-2 leading-[23px]">
                       Shaves ut nisl quam nestibulum drana odio elementum
                       sceisue the can golden varius the dis monte.
@@ -139,10 +139,10 @@ export default function About() {
                 />
               </div>
               <div>
-                <p className="uppercase text-sm font-bold text-[#907559]">
+                <p className="uppercase text-sm font-bold font-co text-[#907559]">
                   17 year of experience
                 </p>
-                <h2 className="text-white  text-2xl md:text-4xl font-bold">
+                <h2 className="text-white font-co  text-2xl md:text-4xl font-bold">
                   Making pepole look awesome since 2006
                 </h2>
                 <p className="text-sm text-[#6B6E69] leading-[20px] py-2 md:py-4">
@@ -173,7 +173,7 @@ export default function About() {
       <section>
         <div className="about_bg_img_2 w-full py-20 lg:py-28">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl lg:text-5xl text-center font-semibold text-white lg:px-80">
+            <h2 className="text-3xl font-co lg:text-5xl text-center font-semibold text-white lg:px-80">
               Watch Our Barbershop Promo Video
             </h2>
             <div className="flex justify-center pt-10">

@@ -17,7 +17,7 @@ function Footer() {
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           <div>
             <div>
-              <h1 className=" text-2xl text-white font-semibold ">
+              <h1 className=" text-2xl font-co text-white font-semibold ">
                 Hairecutes Express llc
               </h1>
             </div>
@@ -44,8 +44,8 @@ function Footer() {
             </div>
           </div>
           <div className="">
-            <h3 className="uppercase text-2xl  font-semibold text-white">
-              contact info
+            <h3 className=" text-2xl font-co  font-semibold text-white">
+              Contact Info
             </h3>
             <div className="py-4"></div>
             <div className="">
@@ -68,7 +68,7 @@ function Footer() {
             </Link>
           </div>
           <div className="text-black">
-            <h3 className="uppercase text-2xl  text-white">SUBSCRIBE</h3>
+            <h3 className=" text-2xl capitalize font-co  text-white">Subscribe</h3>
             <div className="py-4">
               <input
                 type="email"

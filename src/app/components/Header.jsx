@@ -50,26 +50,26 @@ export default function Header() {
       <Typography
         as="li"
         color="blue-gray"
-        className="p-1  font-bold   text-[1rem]   text-white"
+        className="p-1    font-dm  uppercase text-[1rem]    text-white"
       >
         <Link href="/" className="flex   hover:text-[#c9ab8c] items-center">
           Home
         </Link>
       </Typography>
-      <Typography
+      {/* <Typography
         as="li"
         color="blue-gray"
-        className="p-1  font-bold   text-[1rem]   text-white"
+        className="p-1    text-[1rem] font-dm  uppercase    text-white"
       >
         <Link href="/" className="flex   hover:text-[#c9ab8c] items-center">
           Gallery
         </Link>
-      </Typography>
+      </Typography> */}
       <Typography
         as="li"
         variant="small"
         color="blue-gray"
-        className="p-1  font-bold   text-[1rem]   text-white"
+        className="p-1    text-[1rem] font-dm  uppercase    text-white"
       >
         <Link
           href="/service"
@@ -83,7 +83,7 @@ export default function Header() {
         as="li"
         variant="small"
         color="blue-gray"
-        className="p-1  font-bold   text-[1rem]   text-white"
+        className="p-1    text-[1rem] font-dm  uppercase    text-white"
       >
         <Link
           href="/choose"
@@ -97,7 +97,7 @@ export default function Header() {
         as="li"
         variant="small"
         color="blue-gray"
-        className="p-1  font-bold   text-[1rem]   text-white"
+        className="p-1    text-[1rem] font-dm  uppercase    text-white"
       >
         <Link
           href="/about"
@@ -110,13 +110,26 @@ export default function Header() {
         as="li"
         variant="small"
         color="blue-gray"
-        className="p-1  font-bold   text-[1rem]   text-white"
+        className="p-1    text-[1rem] font-dm  uppercase    text-white"
       >
         <Link
-          href="../contact"
+          href="/contact"
           className="flex   hover:text-[#c9ab8c] items-center"
         >
           Contact
+        </Link>
+      </Typography>
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className=" text-center p-3 px-6 cursor-pointer  bg-[#C28565]    text-[1rem] font-dm  uppercase    text-white"
+      >
+        <Link
+          href="/choose"
+          className="flex   font-dm items-center"
+        >
+          Book Now
         </Link>
       </Typography>
     </ul>

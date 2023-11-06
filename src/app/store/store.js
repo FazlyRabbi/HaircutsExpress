@@ -3,6 +3,7 @@ import axios from "axios";
 
 const useStore = create((set) => ({
   timeSlots: [],
+  service: [],
   loading: false,
   error: null,
   category: null,
@@ -12,17 +13,18 @@ const useStore = create((set) => ({
     set({ timeSlots: data });
   },
 
-  fetchCategory: async () => {
+  fetchService: async () => {
     set({ loading: true, error: null });
 
     try {
-      const response = await axios.get(`${process.env.API_URL}/category`);
+      const response = await axios.get(`${process.env.API_URL}/service`);
 
-      set({ category: response.data, loading: false });
+      set({ service: response.data.data, loading: false });
     } catch (error) {
       set({ error, loading: false });
     }
   },
+
 
   fethLatest: async () => {
     set({ loading: true, error: null });
@@ -35,6 +37,7 @@ const useStore = create((set) => ({
       set({ error, loading: false });
     }
   },
+
 }));
 
 export default useStore;

@@ -1,7 +1,5 @@
 import "./globals.css";
-import { Work_Sans } from "next/font/google";
-
-const work_Sans = Work_Sans({ subsets: ["latin"] });
+import Head from "next/head";
 
 export const metadata = {
   title: "Haircuts Express",
@@ -11,7 +9,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={work_Sans.className}>{children}</body>
+      <Head>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;700&family=DM+Sans:wght@400;700&display=swap"
+        />
+      </Head>
+      <body >{children}</body>
     </html>
   );
 }

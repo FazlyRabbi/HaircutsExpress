@@ -30,7 +30,8 @@ module.exports = withMT({
       },
 
       fontFamily: {
-        workSans: ["Work Sans", "sans"], // Add 'Work Sans' to the sans font family
+        dm: ["DM Sans", "sans-serif"],
+        co: ["Cormorant", "serif"],
       },
     },
   },

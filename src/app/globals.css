@@ -3,6 +3,16 @@
 @tailwind utilities;
 
 
+body {
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  h1 {
+    font-family: 'Cormorant', serif;
+
+  }
+
+
 .bg_img{
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(./img/hero.jpg);
     /* background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(./img/image.); */
@@ -84,4 +94,17 @@
 
 .custom__shadow{
     box-shadow: 0px 6px 35px 0px rgba(0, 0, 0, 0.06);
+}
+
+.nice {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-image: none;
+    box-sizing: border-box;
+    clear: both;
+    cursor: pointer;
+    position: relative;
+    line-height: 1.5;
+    transition: all 0.4s ease-in-out;
+    user-select: none;
+    white-space: nowrap;
 }

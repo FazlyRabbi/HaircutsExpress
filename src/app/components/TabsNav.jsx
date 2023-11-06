@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import {
   Tabs,
   TabsHeader,
@@ -6,10 +7,18 @@ import {
   Tab,
   TabPanel,
 } from "@material-tailwind/react";
-import { Button } from "@material-tailwind/react";
+import useStore from "../store/store";
 
 export function TabsNav() {
-  const [activeTab, setActiveTab] = React.useState("Services");
+  const { service, fetchService } = useStore();
+
+  const [activeTab, setActiveTab] = useState("Services");
+
+  useEffect(() => {
+    fetchService();
+  }, []);
+
+  console.log(service.length);
   const data = [
     {
       label: "Services",
@@ -17,32 +26,10 @@ export function TabsNav() {
       desc: (
         <>
           <ul className=" flex flex-col space-y-6">
-            <li>Haircuts Express</li>
-            <li>Haircuts Express With Shampoo</li>
-            <li>Haircuts Express Jr.</li>
-            <li>Haircuts Express Sr</li>
-            <li>Beard</li>
-            <li>** See your stylist for exact pricing</li>
+            {service?.map((name) => 
+              <li key={name.id}>{name?.name}</li>
+            )}
           </ul>
-        </>
-      ),
-    },
-    {
-      label: "Gift Cards",
-      value: "Gift Cards",
-      desc: (
-        <>
-          <div>
-            <p>
-              Add personal audio and photo, send instantly online through email
-              or schedule delivery for a future date. Redeemable at
-              participating U.S. and Puerto Rico salons only.
-            </p>
-            <Button size="md" className="my-8 text-white font-bold">
-              Order Gift card
-            </Button>
-            <p>Learn more about digital gift cards</p>
-          </div>
         </>
       ),
     },

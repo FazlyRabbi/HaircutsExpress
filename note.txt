@@ -373,3 +373,17 @@ https://www.supercuts.com/locations/nearme/haircut/AR/Benton/Hurricane-Creek-Vil
   const handlePrev = () => {
     setNext(false);
   };
+
+
+
+  =========
+
+  dynamic
+
+   service
+  
+   contact 
+
+   appoinment
+
+   coommnet gift card

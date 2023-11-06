@@ -43,10 +43,10 @@ function Services() {
       <div className="about_bg_img w-full py-40 ">
         <div className="container mx-auto px-4">
           <div className="text-white text-center">
-            <p className="uppercase font-semibold text-lg lg:text-xl">
+            <p className="uppercase font-semibold  font-co  text-lg lg:text-xl">
               our service
             </p>
-            <h2 className="text-4xl md:text-6xl font-bold py-2  lg:py-4 tracking-[1px]">
+            <h2 className="text-4xl md:text-6xl  font-co font-bold py-2  lg:py-4 tracking-[1px]">
               Service
             </h2>
           </div>
@@ -69,7 +69,7 @@ function Services() {
                 />
               </div>
               <div className="lg:py-10 flex flex-col justify-center items-center">
-                <h3 className="uppercase font-semibold text-3xl md:text-4xl">
+                <h3 className="uppercase font-semibold text-3xl font-co md:text-4xl">
                   haircuts
                 </h3>
                 <div>
@@ -103,7 +103,7 @@ function Services() {
                 />
               </div>
               <div className="lg:py-10 order-first flex flex-col justify-center items-center">
-                <h3 className="uppercase font-semibold text-3xl md:text-4xl text-center">
+                <h3 className="uppercase font-semibold text-3xl font-co md:text-4xl text-center">
                   WOMEN’S HAIRCUT AND BLOWDRY
                 </h3>
                 <div>
@@ -137,7 +137,7 @@ function Services() {
                 />
               </div>
               <div className="lg:py-10 flex flex-col justify-center items-center">
-                <h3 className="uppercase font-semibold text-3xl md:text-4xl  text-center">
+                <h3 className="uppercase font-semibold text-3xl font-co md:text-4xl  text-center">
                   WOMEN’S BLOW-DRY
                 </h3>
                 <div>
@@ -171,7 +171,7 @@ function Services() {
                 />
               </div>
               <div className="lg:py-10 order-first flex flex-col justify-center items-center">
-                <h3 className="uppercase font-semibold text-3xl md:text-4xl  text-center">
+                <h3 className="uppercase font-semibold text-3xl font-co md:text-4xl  text-center">
                   MEN’S HAIRCUT AND STYLE
                 </h3>
                 <div>
@@ -205,7 +205,7 @@ function Services() {
                 />
               </div>
               <div className=" lg:py-10 flex flex-col justify-center items-center">
-                <h3 className="uppercase font-semibold text-3xl md:text-4xl  text-center">
+                <h3 className="uppercase font-semibold text-3xl font-co md:text-4xl  text-center">
                   CHILD’S HAIRCUT – GIRL & BOY (10 AND UNDER)
                 </h3>
                 <div>
@@ -239,7 +239,7 @@ function Services() {
                 />
               </div>
               <div className="lg:py-10 order-first flex flex-col justify-center items-center">
-                <h3 className="uppercase font-semibold text-3xl md:text-4xl  text-center">
+                <h3 className="uppercase font-semibold text-3xl font-co md:text-4xl  text-center">
                   HAIR COLOR
                 </h3>
                 <div>
@@ -273,7 +273,7 @@ function Services() {
                 />
               </div>
               <div className="lg:py-10 flex flex-col justify-center items-center">
-                <h3 className="uppercase font-semibold text-3xl md:text-4xl  text-center">
+                <h3 className="uppercase font-semibold text-3xl font-co md:text-4xl  text-center">
                   KERATIN REJUVENATION
                 </h3>
                 <div>
@@ -307,7 +307,7 @@ function Services() {
                 />
               </div>
               <div className="lg:py-10 order-first flex flex-col justify-center items-center">
-                <h3 className="uppercase font-semibold text-3xl md:text-4xl  text-center">
+                <h3 className="uppercase font-semibold text-3xl font-co md:text-4xl  text-center">
                   MAKEUP
                 </h3>
                 <div>
@@ -341,7 +341,7 @@ function Services() {
                 />
               </div>
               <div className="lg:py-10 flex flex-col justify-center items-center">
-                <h3 className="uppercase font-semibold text-3xl md:text-4xl  text-center">
+                <h3 className="uppercase font-semibold text-3xl font-co md:text-4xl  text-center">
                   BEST BALAYAGE IN QUEENS NY
                 </h3>
                 <div>
@@ -375,7 +375,7 @@ function Services() {
                 />
               </div>
               <div className="lg:py-10 order-first flex flex-col justify-center items-center">
-                <h3 className="uppercase font-semibold text-3xl md:text-4xl  text-center">
+                <h3 className="uppercase font-semibold text-3xl font-co md:text-4xl  text-center">
                   BEST HIGHLIGHTS IN QUEENS NY
                 </h3>
                 <div>
@@ -409,7 +409,7 @@ function Services() {
                 />
               </div>
               <div className="lg:py-10 flex flex-col justify-center items-center">
-                <h3 className="uppercase font-semibold text-3xl md:text-4xl  text-center">
+                <h3 className="uppercase font-semibold text-3xl font-co md:text-4xl  text-center">
                   BEST OMBRE IN QUEENS, NY
                 </h3>
                 <div>
@@ -443,7 +443,7 @@ function Services() {
                 />
               </div>
               <div className="lg:py-10 order-first flex flex-col justify-center items-center">
-                <h3 className="uppercase font-semibold text-3xl md:text-4xl  text-center">
+                <h3 className="uppercase font-semibold text-3xl font-co md:text-4xl  text-center">
                   BEST OMBRE IN QUEENS, NY
                 </h3>
                 <div>
@@ -477,7 +477,7 @@ function Services() {
                 />
               </div>
               <div className="lg:py-10 flex flex-col justify-center items-center">
-                <h3 className="uppercase font-semibold text-3xl md:text-4xl  text-center">
+                <h3 className="uppercase font-semibold text-3xl font-co md:text-4xl  text-center">
                   BRAZILIAN BLOWOUT QUEENS NY
                 </h3>
                 <div>

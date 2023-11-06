@@ -25,7 +25,9 @@ const init = {
 };
 
 function formatDate(inputDateString) {
+
   const inputDate = new Date(inputDateString);
+
   if (!isNaN(inputDate)) {
     const daysOfWeek = ["su", "mo", "tu", "we", "th", "fr", "sa"];
     const formattedDayOfWeek = daysOfWeek[inputDate.getDay()]; // Get the day of the week abbreviation
@@ -38,9 +40,10 @@ function formatDate(inputDateString) {
   }
 }
 
+
 function Choose() {
 
-  const { timeSlots, setTimeSlot } = useStore();
+  const { timeSlots, setTimeSlot, service:services, fetchService } = useStore();
 
   const [next, setNext] = useState(false);
   const [date, setDate] = useState(null);
@@ -53,6 +56,7 @@ function Choose() {
   useEffect(() => {
     setDate(todayDate);
     createUpdateSlots();
+    fetchService()
     setClient({ ...client, date: date });
   }, []);
 
@@ -94,8 +98,6 @@ function Choose() {
   };
 
   const handleSubmit = async (e) => {
-
-     console.log(timeSlots);
     e.preventDefault();
     try {
       setLoading(true);
@@ -128,7 +130,7 @@ function Choose() {
       <div className="about_bg_img w-full py-40 ">
         <div className="container mx-auto px-4">
           <div className="text-white text-center">
-            <h2 className="text-4xl md:text-6xl font-bold py-2  lg:py-4 tracking-[1px]">
+            <h2 className="text-4xl md:text-6xl  font-co font-bold py-2  lg:py-4 tracking-[1px]">
               Check In
             </h2>
           </div>
@@ -145,7 +147,7 @@ function Choose() {
             <TabsNav />
           </div>
           <div className="mt-5">
-            <h1 className=" border-b  border-gray-900  mb-4  font-semibold text-2xl text-gray-900">
+            <h1 className=" border-b  border-gray-900  mb-4  font-semibold text-2xl font-co text-gray-900">
               Chect-In
             </h1>
 
@@ -159,86 +161,31 @@ function Choose() {
                   </div>
 
                   <ul className="mt-5">
-                    <li className=" mb-8 flex cursor-pointer space-x-5 items-center">
-                      <Button
-                        size="sm"
-                        onClick={(e) => handleNext(e)}
-                        className=" hover:bg-black hover:text-white  outline-4  font-semibold"
-                        variant="outlined"
-                      >
-                        Add
-                      </Button>
-                      <p className=" text-gray-800 font-semibold">
-                        Haircuts Express
-                      </p>
-                    </li>
-                    <li className=" mb-8 flex cursor-pointer space-x-5 items-center">
-                      <Button
-                        size="sm"
-                        onClick={(e) => handleNext(e)}
-                        className=" hover:bg-black hover:text-white  outline-4  font-semibold"
-                        variant="outlined"
-                      >
-                        Add
-                      </Button>
-                      <p className=" text-gray-800 font-semibold">
-                        Haircuts Express With Shampoo
-                      </p>
-                    </li>
-                    <li className=" mb-8 flex cursor-pointer space-x-5 items-center">
-                      <Button
-                        size="sm"
-                        onClick={(e) => handleNext(e)}
-                        className=" hover:bg-black hover:text-white  outline-4  font-semibold"
-                        variant="outlined"
-                      >
-                        Add
-                      </Button>
-                      <p className=" text-gray-800 font-semibold">
-                        Haircuts Express Jr.
-                      </p>
-                    </li>
-                    <li className=" mb-8 flex cursor-pointer space-x-5 items-center">
-                      <Button
-                        size="sm"
-                        onClick={(e) => handleNext(e)}
-                        className=" hover:bg-black hover:text-white  outline-4  font-semibold"
-                        variant="outlined"
-                      >
-                        Add
-                      </Button>
-                      <p className=" text-gray-800 font-semibold">
-                        Haircuts Express Sr.
-                      </p>
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <div className="  font-semibold p-2 max-w-2xl bg-black text-white">
-                    Beard Trim
-                  </div>
 
-                  <ul className="mt-5">
+                    {services?.map((name)=>
                     <li className=" mb-8 flex cursor-pointer space-x-5 items-center">
                       <Button
                         size="sm"
-                        onClick={() => handleNext()}
+                        onClick={(e) => handleNext(e)}
                         className=" hover:bg-black hover:text-white  outline-4  font-semibold"
                         variant="outlined"
                       >
-                        Beard
+                        Add
                       </Button>
                       <p className=" text-gray-800 font-semibold">
-                        Haircuts Express
+                        {name?.name}
                       </p>
                     </li>
+                   
+                    )}
                   </ul>
                 </div>
+             
               </div>
             ) : (
               <div>
-                <h1 className="  font-semibold text-2xl">Servies</h1>
-                <p className="my-5">{service}</p>
+                <h1 className="  font-semibold text-2xl font-co">Servies</h1>
+                <p className="my-5 ">{service}</p>
                 <Button
                   size="sm"
                   onClick={() => handlePrev()}

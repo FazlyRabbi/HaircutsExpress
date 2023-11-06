@@ -56,13 +56,13 @@ function Choose() {
   useEffect(() => {
     setDate(todayDate);
     createUpdateSlots();
-    fetchService()
-    setClient({ ...client, date: date });
-  }, []);
+    fetchService();
+    setClient({ ...client, date: todayDate });
+  }, [todayDate, fetchService, client]);
 
   useEffect(() => {
     setClient({ ...client, date: date });
-  }, [date]);
+  }, [date, client]);
 
   // create slots
   const createUpdateSlots = async () => {
@@ -162,8 +162,8 @@ function Choose() {
 
                   <ul className="mt-5">
 
-                    {services?.map((name)=>
-                    <li className=" mb-8 flex cursor-pointer space-x-5 items-center">
+                    {services?.map((name, index)=>
+                    <li key={index} className=" mb-8 flex cursor-pointer space-x-5 items-center">
                       <Button
                         size="sm"
                         onClick={(e) => handleNext(e)}

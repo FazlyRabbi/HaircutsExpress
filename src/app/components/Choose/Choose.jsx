@@ -25,7 +25,6 @@ const init = {
 };
 
 function formatDate(inputDateString) {
-
   const inputDate = new Date(inputDateString);
 
   if (!isNaN(inputDate)) {
@@ -40,10 +39,13 @@ function formatDate(inputDateString) {
   }
 }
 
-
 function Choose() {
-
-  const { timeSlots, setTimeSlot, service:services, fetchService } = useStore();
+  const {
+    timeSlots,
+    setTimeSlot,
+    service: services,
+    fetchService,
+  } = useStore();
 
   const [next, setNext] = useState(false);
   const [date, setDate] = useState(null);
@@ -53,34 +55,44 @@ function Choose() {
 
   const todayDate = moment().format("MM/DD/YYYY");
 
-  useEffect(() => {
-    setDate(todayDate);
-    createUpdateSlots();
-    fetchService();
-    setClient({ ...client, date: todayDate });
-  }, [todayDate, fetchService, client]);
+// useEffect(() => {
+//   const updatedClient = { ...client, date: todayDate };
+//   setClient(updatedClient);
+//   setDate(todayDate);
+//   createUpdateSlots();
+//   fetchService();
+// }, []);
 
-  useEffect(() => {
-    setClient({ ...client, date: date });
-  }, [date, client]);
+  // useEffect(() => {
+  //   setClient({ ...client, date: date });
+  // }, [client]);
 
   // create slots
+
+
   const createUpdateSlots = async () => {
     const response = await axios.post(`${process.env.API_URL}/createslot`);
   };
 
+
   // Update the key whenever the 'date' state changes
   const { data, error, isLoading, refetch } = useSWR(
-    ["post-date-data", date], // Use 'date' as a dependency in the key
+    [date],
+    // Use 'date' as a dependency in the key
     async (key) => {
-      const [, selectedDate] = key; // Destructure the date from the key
+      const [selectedDate] = key; // Destructure the date from the key
+
       const response = await axios.put(`${process.env.API_URL}/createslot`, {
         date: selectedDate, // Use the selected date from the destructured key
       });
 
+ 
       setTimeSlot(response?.data?.data);
     }
   );
+
+
+
 
   const { formattedDates } = useSevenDaysFromToday();
 
@@ -161,26 +173,26 @@ function Choose() {
                   </div>
 
                   <ul className="mt-5">
-
-                    {services?.map((name, index)=>
-                    <li key={index} className=" mb-8 flex cursor-pointer space-x-5 items-center">
-                      <Button
-                        size="sm"
-                        onClick={(e) => handleNext(e)}
-                        className=" hover:bg-black hover:text-white  outline-4  font-semibold"
-                        variant="outlined"
+                    {services?.map((name, index) => (
+                      <li
+                        key={index}
+                        className=" mb-8 flex cursor-pointer space-x-5 items-center"
                       >
-                        Add
-                      </Button>
-                      <p className=" text-gray-800 font-semibold">
-                        {name?.name}
-                      </p>
-                    </li>
-                   
-                    )}
+                        <Button
+                          size="sm"
+                          onClick={(e) => handleNext(e)}
+                          className=" hover:bg-black hover:text-white  outline-4  font-semibold"
+                          variant="outlined"
+                        >
+                          Add
+                        </Button>
+                        <p className=" text-gray-800 font-semibold">
+                          {name?.name}
+                        </p>
+                      </li>
+                    ))}
                   </ul>
                 </div>
-             
               </div>
             ) : (
               <div>
@@ -206,9 +218,10 @@ function Choose() {
                         formattedDate.slice(2),
                       ];
 
+                     
                       return (
                         <div
-                          onClick={() =>  setDate(da)}
+                          onClick={() => setDate(da)}
                           key={da}
                           className={`border-2 text-black border-[#14100c] max-w-[4rem]   transition-all duration-300   uppercase cursor-pointer w-full mt-2 text-center rounded-md p-2 flex flex-col justify-center font-semibold  ${
                             client.date === da
@@ -240,7 +253,9 @@ function Choose() {
                         transition-all duration-300
                      hover:text-white  hover:bg-[#14100c]
                     cursor-pointer  mt-2 text-center rounded-md   px-[2rem]  bg-flex flex-col justify-center font-semibold text-[#14100c]  ${
-                      client?.time === slot?.timeSlot ? "  text-white  bg-[#14100c]" : ""
+                      client?.time === slot?.timeSlot
+                        ? "  text-white  bg-[#14100c]"
+                        : ""
                     }`}
                         >
                           <p>{slot?.timeSlot}</p>

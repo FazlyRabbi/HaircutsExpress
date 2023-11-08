@@ -18,7 +18,7 @@ export function TabsNav() {
     fetchService();
   }, []);
 
-  console.log(service.length);
+
   const data = [
     {
       label: "Services",

@@ -90,6 +90,13 @@ body {
     background-repeat: no-repeat;
 }
 
+.service_bg_img{
+    background-image:url(./img/service-item-bg.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 /* custom shadow */
 
 .custom__shadow{

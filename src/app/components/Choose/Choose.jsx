@@ -1,7 +1,14 @@
 import React, { useState, useEffect } from "react";
 import useStore from "@/app/store/store";
 import { TabsNav } from "../TabsNav";
-import { Button, Spinner } from "@material-tailwind/react";
+import {
+  Button,
+  Spinner,
+  Dialog,
+  DialogHeader,
+  DialogBody,
+  DialogFooter,
+} from "@material-tailwind/react";
 import { useSevenDaysFromToday } from "../lib/useSevenDaysFromToday";
 import axios from "axios";
 import useSWR from "swr";
@@ -47,52 +54,45 @@ function Choose() {
     fetchService,
   } = useStore();
 
-  const [next, setNext] = useState(false);
+  const [open, setOpen] = useState(false);
+
+  const handleOpen = () => setOpen(!open);
+
   const [date, setDate] = useState(null);
-  const [service, setService] = useState(null);
   const [client, setClient] = useState(init);
-  const [loading, setLoading] = useState(false);
 
-  const todayDate = moment().format("MM/DD/YYYY");
-
-// useEffect(() => {
-//   const updatedClient = { ...client, date: todayDate };
-//   setClient(updatedClient);
-//   setDate(todayDate);
-//   createUpdateSlots();
-//   fetchService();
-// }, []);
-
-  // useEffect(() => {
-  //   setClient({ ...client, date: date });
-  // }, [client]);
-
-  // create slots
-
-
-  const createUpdateSlots = async () => {
-    const response = await axios.post(`${process.env.API_URL}/createslot`);
-  };
-
-
-  // Update the key whenever the 'date' state changes
-  const { data, error, isLoading, refetch } = useSWR(
-    [date],
-    // Use 'date' as a dependency in the key
+  const { data, error, isLoading } = useSWR(
+    date ? [date] : null, // Pass the key only if date is not null
     async (key) => {
       const [selectedDate] = key; // Destructure the date from the key
 
       const response = await axios.put(`${process.env.API_URL}/createslot`, {
         date: selectedDate, // Use the selected date from the destructured key
       });
-
- 
-      setTimeSlot(response?.data?.data);
+      setClient({ ...client, date: date });
+      setTimeSlot(response?.data?.data); // Return the data from the response
     }
   );
+  const [next, setNext] = useState(false);
 
+  const [service, setService] = useState(null);
 
+  const [loading, setLoading] = useState(false);
+  const todayDate = moment().format("MM/DD/YYYY");
 
+  useEffect(() => {
+    setDate(todayDate);
+  }, []);
+
+  const refetch = async () => {
+    if (date === todayDate) {
+      const response = await axios.put(`${process.env.API_URL}/createslot`, {
+        date: date, // Use the selected date from the destructured key
+      });
+      setTimeSlot(response?.data?.data);
+      return;
+    }
+  };
 
   const { formattedDates } = useSevenDaysFromToday();
 
@@ -111,18 +111,44 @@ function Choose() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     try {
       setLoading(true);
       // Make a POST request using Axios
+      const blockResponse = await axios.post(
+        `${process.env.API_URL}/blockSlot`,
+        {
+          date: client?.date,
+          timeSlot: client?.time,
+        }
+      );
+
+      if (!blockResponse.data.ok) {
+        setLoading(false);
+        return;
+      }
+
       const response = await axios.post(
         `${process.env.API_URL}/client`,
         client
       );
 
       if (response.data.ok) {
+        setOpen(true);
+
+        refetch();
+        setDate(todayDate);
+        setClient({
+          serviceName: "",
+          date: todayDate,
+          time: "",
+          firstName: "",
+          lastName: "",
+          phoneNumber: "",
+          email: "",
+        });
         setLoading(false);
         notify();
-
         return;
       } else {
         setLoading(false);
@@ -130,11 +156,9 @@ function Choose() {
     } catch (error) {
       // Handle errors that occurred during the request
       console.error("Error making POST request:", error);
-
       // You can throw the error to propagate it up the call stack
       throw error;
     }
-    // Update the 'date' state, triggering a re-fetch of the data
   };
 
   return (
@@ -218,7 +242,6 @@ function Choose() {
                         formattedDate.slice(2),
                       ];
 
-                     
                       return (
                         <div
                           onClick={() => setDate(da)}
@@ -368,6 +391,41 @@ function Choose() {
           </div>
         </div>
       </div>
+
+      {/* Appointment Dialog */}
+
+      <Dialog
+        open={open}
+        handler={handleOpen}
+        className="max-w-[5rem]  md:text-center"
+      >
+        <DialogBody className="pt-8">
+          <p>
+            Your Choosen Service : <span className=" font-semibold">{client?.serviceName}</span>
+          </p>
+          <p>
+            Name: <span className=" font-semibold">{client?.firstName}</span>
+          </p>
+          <p>
+            Email: <span className=" font-semibold">{client?.email}</span>
+          </p>
+          <p>
+            Date: <span className=" font-semibold">{client?.date}</span>
+          </p>
+          <p>
+            Your Selected Time:{" "}
+            <span className=" font-semibold">{client?.time}</span>
+          </p>
+        </DialogBody>
+        <DialogHeader className=" flex  text-green-400 e justify-center items-center">
+          Thanks for Choosing Us!
+        </DialogHeader>
+        <DialogFooter>
+          <Button variant="gradient" color="green" onClick={handleOpen}>
+            <span>Ok</span>
+          </Button>
+        </DialogFooter>
+      </Dialog>
     </section>
   );
 }

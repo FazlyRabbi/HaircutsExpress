@@ -18,7 +18,6 @@ export function TabsNav() {
     fetchService();
   }, []);
 
-
   const data = [
     {
       label: "Services",
@@ -26,9 +25,11 @@ export function TabsNav() {
       desc: (
         <>
           <ul className=" flex flex-col space-y-6">
-            {service?.map((name) => 
-              <li key={name.id}>{name?.name}</li>
-            )}
+            {service?.map((name) => (
+              <li key={name.id} className=" ">
+                {name?.name}
+              </li>
+            ))}
           </ul>
         </>
       ),
@@ -48,7 +49,7 @@ export function TabsNav() {
             key={value}
             value={value}
             onClick={() => setActiveTab(value)}
-            className={activeTab === value ? "text-gray-900" : ""}
+            className={activeTab === value ? "text-gray-900 font-bold" : "font-bold"}
           >
             {label}
           </Tab>
@@ -56,7 +57,7 @@ export function TabsNav() {
       </TabsHeader>
       <TabsBody>
         {data.map(({ value, desc }) => (
-          <TabPanel key={value} value={value}>
+          <TabPanel className=" font-semibold" key={value} value={value}>
             {desc}
           </TabPanel>
         ))}

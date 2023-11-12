@@ -34,7 +34,7 @@ function Contactpage() {
       setIsLoading(true);
       // Make a POST request using Axios
       const response = await axios.post(
-        `${process.env.API_URL}/contact`,
+        `${process.env.API_URL}/api/contact`,
         contact
       );
 

@@ -66,7 +66,7 @@ function Choose() {
     async (key) => {
       const [selectedDate] = key; // Destructure the date from the key
 
-      const response = await axios.put(`${process.env.API_URL}/createslot`, {
+      const response = await axios.put(`${process.env.API_URL}/api/createslot`, {
         date: selectedDate, // Use the selected date from the destructured key
       });
       setClient({ ...client, date: date });
@@ -86,7 +86,7 @@ function Choose() {
 
   const refetch = async () => {
     if (date === todayDate) {
-      const response = await axios.put(`${process.env.API_URL}/createslot`, {
+      const response = await axios.put(`${process.env.API_URL}/api/createslot`, {
         date: date, // Use the selected date from the destructured key
       });
       setTimeSlot(response?.data?.data);
@@ -116,7 +116,7 @@ function Choose() {
       setLoading(true);
       // Make a POST request using Axios
       const blockResponse = await axios.post(
-        `${process.env.API_URL}/blockSlot`,
+        `${process.env.API_URL}/api/blockSlot`,
         {
           date: client?.date,
           timeSlot: client?.time,
@@ -129,7 +129,7 @@ function Choose() {
       }
 
       const response = await axios.post(
-        `${process.env.API_URL}/client`,
+        `${process.env.API_URL}/api/client`,
         client
       );
 

@@ -17,7 +17,7 @@ const useStore = create((set) => ({
     set({ loading: true, error: null });
 
     try {
-      const response = await axios.get(`${process.env.API_URL}/service`);
+      const response = await axios.get(`${process.env.API_URL}/api/service`);
 
       set({ service: response.data.data, loading: false });
     } catch (error) {
@@ -30,7 +30,7 @@ const useStore = create((set) => ({
     set({ loading: true, error: null });
 
     try {
-      const response = await axios.get(`${process.env.API_URL}/getletest`);
+      const response = await axios.get(`${process.env.API_URL}/api/getletest`);
 
       set({ latest18: response.data.data, loading: false });
     } catch (error) {

@@ -119,7 +119,7 @@ function Contactpage() {
           <div className="right   lg:col-span-2 overflow-hidden">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.38854235153!2d-73.66090922355048!3d40.7534782713875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c28806b73d5ebb%3A0xb96b55c0132e6479!2s3330%20Hillside%20Ave.%2C%20New%20Hyde%20Park%2C%20NY%2011040%2C%20USA!5e0!3m2!1sen!2sbd!4v1698777458603!5m2!1sen!2sbd"
-              className="w-full   grayscale fill-teal-50 h-full min-h-[35rem]"
+              className="w-full   h-full min-h-[35rem]"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"

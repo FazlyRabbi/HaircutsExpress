@@ -142,7 +142,7 @@ function Contactpage() {
                     onChange={(e) =>
                       setContact({ ...contact, name: e.target.value })
                     }
-                    disabled={isLoading}
+                    
                     required
                     placeholder="Your name"
                     type="text"
@@ -154,7 +154,7 @@ function Contactpage() {
                     onChange={(e) =>
                       setContact({ ...contact, email: e.target.value })
                     }
-                    disabled={isLoading}
+                    
                     required
                     placeholder="Email Address"
                     type="email"
@@ -168,7 +168,7 @@ function Contactpage() {
                     onChange={(e) =>
                       setContact({ ...contact, phoneNumber: e.target.value })
                     }
-                    disabled={isLoading}
+                    
                     required
                     placeholder="Phone Number"
                     type="number"
@@ -179,7 +179,7 @@ function Contactpage() {
                     onChange={(e) =>
                       setContact({ ...contact, serviceName: e.target.value })
                     }
-                    disabled={isLoading}
+                    
                     required
                     className="bg-[#F9F3F0] p-3 focus-within:outline-none text-[#6e6e6e]"
                   >
@@ -194,7 +194,7 @@ function Contactpage() {
                   onChange={(e) =>
                     setContact({ ...contact, Message: e.target.value })
                   }
-                  disabled={isLoading}
+                  // 
                   required
                   placeholder="Write message..."
                   className="w-full focus-within:outline-none  p-5  mt-5 bg-[#F9F3F0]"
@@ -204,11 +204,12 @@ function Contactpage() {
                   type="submit"
                   className="bg-[#C28565] flex justify-center text-white  mt-4 p-5  w-full uppercase"
                 >
-                  {isLoading ? (
+                  {/* {isLoading ? (
                     "sending..."
                   ) : (
                     "Send Message"
-                  )}
+                  )} */}
+                  Send Message
                 </button>
               </form>
             </div>

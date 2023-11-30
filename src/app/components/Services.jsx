@@ -83,10 +83,10 @@ function Services() {
                 </p>
                 <div className="py-10">
                   <Link
-                    href={"#"}
+                    href={"/choose"}
                     className="uppercase tracking-[2px] border-[1px]  py-4 px-8 border-[#E2AE10] hover:bg-[#E2AE10] hover:text-white transition-all duration-200"
                   >
-                    learn more
+                    Book Now
                   </Link>
                 </div>
               </div>
@@ -117,10 +117,10 @@ function Services() {
                 </p>
                 <div className="py-10">
                   <Link
-                    href={"#"}
+                    href={"/choose"}
                     className="uppercase tracking-[2px] border-[1px]  py-4 px-8 border-[#E2AE10] hover:bg-[#E2AE10] hover:text-white transition-all duration-200"
                   >
-                    learn more
+                    Book Now
                   </Link>
                 </div>
               </div>
@@ -151,10 +151,10 @@ function Services() {
                 </p>
                 <div className="py-10">
                   <Link
-                    href={"#"}
+                    href={"/choose"}
                     className="uppercase tracking-[2px] border-[1px] border-[#E2AE10] hover:bg-[#E2AE10] py-4 px-8  hover:text-white transition-all duration-200"
                   >
-                    learn more
+                    Book Now
                   </Link>
                 </div>
               </div>
@@ -185,10 +185,10 @@ function Services() {
                 </p>
                 <div className="py-10">
                   <Link
-                    href={"#"}
+                    href={"/choose"}
                     className="uppercase tracking-[2px] border-[1px] border-[#E2AE10] hover:bg-[#E2AE10] py-4 px-8  hover:text-white transition-all duration-200"
                   >
-                    learn more
+                    Book Now
                   </Link>
                 </div>
               </div>
@@ -219,10 +219,10 @@ function Services() {
                 </p>
                 <div className="py-10">
                   <Link
-                    href={"#"}
+                    href={"/choose"}
                     className="uppercase tracking-[2px] border-[1px] border-[#E2AE10] hover:bg-[#E2AE10] py-4 px-8  hover:text-white transition-all duration-200"
                   >
-                    learn more
+                    Book Now
                   </Link>
                 </div>
               </div>
@@ -253,10 +253,10 @@ function Services() {
                 </p>
                 <div className="py-10">
                   <Link
-                    href={"#"}
+                    href={"/choose"}
                     className="uppercase tracking-[2px] border-[1px] border-[#E2AE10] hover:bg-[#E2AE10] py-4 px-8  hover:text-white transition-all duration-200"
                   >
-                    learn more
+                    Book Now
                   </Link>
                 </div>
               </div>
@@ -287,10 +287,10 @@ function Services() {
                 </p>
                 <div className="py-10">
                   <Link
-                    href={"#"}
+                    href={"/choose"}
                     className="uppercase tracking-[2px] border-[1px] border-[#E2AE10] hover:bg-[#E2AE10] py-4 px-8  hover:text-white transition-all duration-200"
                   >
-                    learn more
+                    Book Now
                   </Link>
                 </div>
               </div>
@@ -321,10 +321,10 @@ function Services() {
                 </p>
                 <div className="py-10">
                   <Link
-                    href={"#"}
+                    href={"/choose"}
                     className="uppercase tracking-[2px] border-[1px] border-[#E2AE10] hover:bg-[#E2AE10] py-4 px-8  hover:text-white transition-all duration-200"
                   >
-                    learn more
+                    Book Now
                   </Link>
                 </div>
               </div>
@@ -355,10 +355,10 @@ function Services() {
                 </p>
                 <div className="py-10">
                   <Link
-                    href={"#"}
+                    href={"/choose"}
                     className="uppercase tracking-[2px] border-[1px] border-[#E2AE10] hover:bg-[#E2AE10] py-4 px-8  hover:text-white transition-all duration-200"
                   >
-                    learn more
+                    Book Now
                   </Link>
                 </div>
               </div>
@@ -389,10 +389,10 @@ function Services() {
                 </p>
                 <div className="py-10">
                   <Link
-                    href={"#"}
+                    href={"/choose"}
                     className="uppercase tracking-[2px] border-[1px] border-[#E2AE10] hover:bg-[#E2AE10] py-4 px-8 hover:text-white transition-all duration-200"
                   >
-                    learn more
+                    Book Now
                   </Link>
                 </div>
               </div>
@@ -423,10 +423,10 @@ function Services() {
                 </p>
                 <div className="py-10">
                   <Link
-                    href={"#"}
+                    href={"/choose"}
                     className="uppercase tracking-[2px] border-[1px] border-[#E2AE10] hover:bg-[#E2AE10] py-4 px-8 hover:text-white transition-all duration-200"
                   >
-                    learn more
+                    Book Now
                   </Link>
                 </div>
               </div>
@@ -457,10 +457,10 @@ function Services() {
                 </p>
                 <div className="py-10">
                   <Link
-                    href={"#"}
+                    href={"/choose"}
                     className="uppercase tracking-[2px] border-[1px] border-[#E2AE10] hover:bg-[#E2AE10] py-4 px-8 hover:text-white transition-all duration-200"
                   >
-                    learn more
+                    Book Now
                   </Link>
                 </div>
               </div>
@@ -491,10 +491,10 @@ function Services() {
                 </p>
                 <div className="py-10">
                   <Link
-                    href={"#"}
+                    href={"/choose"}
                     className="uppercase tracking-[2px] border-[1px] border-[#E2AE10] hover:bg-[#E2AE10] py-4 px-8  hover:text-white transition-all duration-200"
                   >
-                    learn more
+                    Book Now
                   </Link>
                 </div>
               </div>

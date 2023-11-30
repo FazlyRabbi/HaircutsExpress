@@ -52,7 +52,6 @@ function Home() {
         setIsLoading(false);
         notify();
         setContact(init);
-       
         return;
       } else {
         setIsLoading(false);
@@ -75,70 +74,69 @@ function Home() {
 
       <section>
         <div className=" w-full ">
-           <div className=" bg-[#F5EEE7] py-20">
-
-          <div className="container mx-auto px-4">
-            <div className=" grid grid-cols-1 gap-5 lg:grid-cols-2">
-              <div className="">
-                <p className="uppercase text-[#91765A] font-co font-semibold tracking-[1px]">
-                  All Walk -ins Welcome
-                </p>
-                <h3 className="text-3xl  lg:text-5xl font-co font-bold text-black">
-                  Haircuts Barber Shop
-                </h3>
-                <p className="text-sm text-[#6B6E69] py-4  pr-[5rem] leading-[20px]">
-                  Come experience a unique and edgy barbershop for all your hair
-                  and beard needs. ravida haretra nuam enim mi obortis eset
-                  uctus enec accumsan eu justo alisuame amet auctor orci donec
-                  vitae vehicula risus.
-                </p>
-                <p className="text-sm text-[#6B6E69] leading-[20px] pr-[5rem]">
-                  Barber utate ons amet ravida haretra nuam the duru miss uctus
-                  the drana accumsan justo aliquam sit amet auctor orci done
-                  vitae risus duise nisan sapien silver on the accumsan id
-                  mauris apien.
-                </p>
-                <div className="py-5 space-y-2">
-                  <div className="flex items-center gap-2 text-[#6B6E69]">
-                    <GiCheckMark className="text-sm" />
-                    <p className="text-sm">
-                      We&apos;re professional and certified barbers
-                    </p>
-                  </div>
-                  <div className="flex items-center gap-2 text-[#6B6E69]">
-                    <GiCheckMark className="text-sm" />
-                    <p className="text-sm">
-                      We use quality products to make you look perfect
-                    </p>
-                  </div>
-                  <div className="flex items-center gap-2 text-[#6B6E69]">
-                    <GiCheckMark className="text-sm" />
-                    <p className="text-sm">
-                      We care about our customers satisfaction
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="grid grid-cols-2 gap-5 py-5">
+          <div className=" bg-[#F5EEE7] py-20">
+            <div className="container mx-auto px-4">
+              <div className=" grid grid-cols-1 gap-5 lg:grid-cols-2">
                 <div className="">
-                  <Image
-                    src={about_img_2}
-                    alt="about_image"
-                    className="custom__shadow "
-                  />
+                  <p className="uppercase text-[#91765A] font-co font-semibold tracking-[1px]">
+                    All Walk -ins Welcome
+                  </p>
+                  <h3 className="text-3xl  lg:text-5xl font-co font-bold text-black">
+                    Haircuts Barber Shop
+                  </h3>
+                  <p className="text-sm text-[#6B6E69] py-4  pr-[5rem] leading-[20px]">
+                    Come experience a unique and edgy barbershop for all your
+                    hair and beard needs. ravida haretra nuam enim mi obortis
+                    eset uctus enec accumsan eu justo alisuame amet auctor orci
+                    donec vitae vehicula risus.
+                  </p>
+                  <p className="text-sm text-[#6B6E69] leading-[20px] pr-[5rem]">
+                    Barber utate ons amet ravida haretra nuam the duru miss
+                    uctus the drana accumsan justo aliquam sit amet auctor orci
+                    done vitae risus duise nisan sapien silver on the accumsan
+                    id mauris apien.
+                  </p>
+                  <div className="py-5 space-y-2">
+                    <div className="flex items-center gap-2 text-[#6B6E69]">
+                      <GiCheckMark className="text-sm" />
+                      <p className="text-sm">
+                        We&apos;re professional and certified barbers
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-2 text-[#6B6E69]">
+                      <GiCheckMark className="text-sm" />
+                      <p className="text-sm">
+                        We use quality products to make you look perfect
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-2 text-[#6B6E69]">
+                      <GiCheckMark className="text-sm" />
+                      <p className="text-sm">
+                        We care about our customers satisfaction
+                      </p>
+                    </div>
+                  </div>
                 </div>
+                <div className="grid grid-cols-2 gap-5 py-5">
+                  <div className="">
+                    <Image
+                      src={about_img_2}
+                      alt="about_image"
+                      className="custom__shadow "
+                    />
+                  </div>
 
-                <div className="mt-28 ">
-                  <Image
-                    src={about_img_1}
-                    alt="about_image"
-                    className=" -ml-[3rem] "
-                  />
+                  <div className="mt-28 ">
+                    <Image
+                      src={about_img_1}
+                      alt="about_image"
+                      className=" -ml-[3rem] "
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
 
-            {/* <div className="py-20">
+              {/* <div className="py-20">
               <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:gap-6">
                 <div className="flex gap-5">
                   <div>
@@ -185,7 +183,7 @@ function Home() {
               </div>
             </div> */}
 
-            {/* <section>
+              {/* <section>
               <div className="bg-[#F5EEE7] w-full py-20">
                 <div className="container mx-auto px-4 ">
                   <div className="text-center">
@@ -266,8 +264,8 @@ function Home() {
             </section> 
 
             {/* ================================= */}
+            </div>
           </div>
-           </div>
           <section className=" relative pt-[6rem]">
             <Image
               src={b2}
@@ -281,12 +279,7 @@ function Home() {
             />
             <div className="container mx-auto">
               <div className=" w-full py-10">
-              
-              
                 <div className="container mx-auto px-4">
-                 
-                 
-                 
                   <div className="text-center pb-5">
                     <p className="font-semibold font-co lg:text-lg text-[#91765A]">
                       what we are offering
@@ -296,15 +289,12 @@ function Home() {
                     </h2>
                   </div>
 
-
                   <div
                     className="py-10
       
       
       grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
                   >
-
-
                     <div className="service_bg_img h-[20rem] bg-white text-center w-full py-10 custom__shadow  text-[#14100C] hover:text-[#91765A] transition-all duration-300">
                       <div className="flex flex-col gap-3  items-center">
                         <IoIosCut className="text-5xl text-[#91765A]" />
@@ -383,11 +373,6 @@ function Home() {
 
       {/* =====new section==== */}
 
-
-
-   
-
-      
       {/* =====new section==== */}
 
       {/* ======footer top secton===== */}
@@ -494,8 +479,11 @@ function Home() {
                       Deep Conditioning Treatments
                     </option>
                   </select>
-
-                  <button type="submit" className=" mt-8 hover:bg-[#000] bg-[#91765A] text-white font-semibold  w-full md:p-4 p-2">
+                  <Toaster />
+                  <button
+                    type="submit"
+                    className=" mt-8 hover:bg-[#000] bg-[#91765A] text-white font-semibold  w-full md:p-4 p-2"
+                  >
                     Make Appointment
                   </button>
                 </form>

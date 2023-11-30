@@ -66,13 +66,18 @@ function Choose() {
     async (key) => {
       const [selectedDate] = key; // Destructure the date from the key
 
-      const response = await axios.put(`${process.env.API_URL}/api/createslot`, {
-        date: selectedDate, // Use the selected date from the destructured key
-      });
+      const response = await axios.put(
+        `${process.env.API_URL}/api/createslot`,
+        {
+          date: selectedDate, // Use the selected date from the destructured key
+        }
+      );
+
       setClient({ ...client, date: date });
       setTimeSlot(response?.data?.data); // Return the data from the response
     }
   );
+
   const [next, setNext] = useState(false);
 
   const [service, setService] = useState(null);
@@ -80,15 +85,31 @@ function Choose() {
   const [loading, setLoading] = useState(false);
   const todayDate = moment().format("MM/DD/YYYY");
 
+  const handleClear = () => {
+    setClient({
+      serviceName: "",
+      date: todayDate,
+      time: "",
+      firstName: "",
+      lastName: "",
+      phoneNumber: "",
+      email: "",
+    });
+  };
+
   useEffect(() => {
     setDate(todayDate);
+    fetchService();
   }, []);
 
   const refetch = async () => {
     if (date === todayDate) {
-      const response = await axios.put(`${process.env.API_URL}/api/createslot`, {
-        date: date, // Use the selected date from the destructured key
-      });
+      const response = await axios.put(
+        `${process.env.API_URL}/api/createslot`,
+        {
+          date: date, // Use the selected date from the destructured key
+        }
+      );
       setTimeSlot(response?.data?.data);
       return;
     }
@@ -138,15 +159,6 @@ function Choose() {
 
         refetch();
         setDate(todayDate);
-        setClient({
-          serviceName: "",
-          date: todayDate,
-          time: "",
-          firstName: "",
-          lastName: "",
-          phoneNumber: "",
-          email: "",
-        });
         setLoading(false);
         notify();
         return;
@@ -234,7 +246,7 @@ function Choose() {
                 <div className="mt-5">
                   <h1 className="  text-xl font-semibold">Date</h1>
                   <div className=" flex  space-x-4">
-                    {formattedDates.map((da) => {
+                    {formattedDates?.map((da) => {
                       const formattedDate = formatDate(da);
 
                       const [day, abbreviation] = [
@@ -401,7 +413,8 @@ function Choose() {
       >
         <DialogBody className="pt-8">
           <p>
-            Your Choosen Service : <span className=" font-semibold">{client?.serviceName}</span>
+            Your Choosen Service :{" "}
+            <span className=" font-semibold">{client?.serviceName}</span>
           </p>
           <p>
             Name: <span className=" font-semibold">{client?.firstName}</span>
@@ -422,7 +435,7 @@ function Choose() {
         </DialogHeader>
         <DialogFooter>
           <Button variant="gradient" color="green" onClick={handleOpen}>
-            <span>Ok</span>
+            <span onClick={() => handleClear()}>Ok</span>
           </Button>
         </DialogFooter>
       </Dialog>

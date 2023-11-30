@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { BsInstagram } from "react-icons/bs";
 import { FaMapLocationDot, FaPhone } from "react-icons/fa";
+
 import {MdLocationPin} from "react-icons/md"
 import {TbMail} from "react-icons/tb"
 

@@ -2,8 +2,7 @@
 const nextConfig = {
   env: {
     API_URL: process.env.API_URL,
-    API_URi: process.env.API_URL,
-   
+  
   },
 };
 

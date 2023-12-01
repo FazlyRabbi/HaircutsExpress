@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
+
 import useStore from "@/app/store/store";
+
 import { TabsNav } from "../TabsNav";
+
 import {
   Button,
   Spinner,
@@ -9,7 +12,15 @@ import {
   DialogBody,
   DialogFooter,
 } from "@material-tailwind/react";
+
 import { useSevenDaysFromToday } from "../lib/useSevenDaysFromToday";
+import {
+  ChevronDoubleLeftIcon,
+  ScissorsIcon,
+  CalendarDaysIcon,
+  ClockIcon,
+} from "@heroicons/react/24/outline";
+
 import axios from "axios";
 import useSWR from "swr";
 import moment from "moment";
@@ -56,7 +67,10 @@ function Choose() {
 
   const [open, setOpen] = useState(false);
 
-  const handleOpen = () => setOpen(!open);
+  const handleOpen = () => {
+    setOpen(!open);
+    handleClear();
+  };
 
   const [date, setDate] = useState(null);
   const [client, setClient] = useState(init);
@@ -86,6 +100,7 @@ function Choose() {
   const todayDate = moment().format("MM/DD/YYYY");
 
   const handleClear = () => {
+    handlePrev();
     setClient({
       serviceName: "",
       date: todayDate,
@@ -189,102 +204,130 @@ function Choose() {
 
       {/* daynamic content  */}
 
-      <div className=" container mx-auto py-10">
-        <div className=" md:grid-cols-2 gap-x-10 grid grid-cols-1">
-          <div className="mt-5">
-            <TabsNav />
-          </div>
-          <div className="mt-5">
-            <h1 className=" border-b  border-gray-900  mb-4  font-semibold text-2xl font-co text-gray-900">
-              Chect-In
-            </h1>
+      {timeSlots.length === 0 ? (
+        <div className=" h-[80vh] flex items-center justify-center">
+          <Spinner className="h-10 w-10" />
+        </div>
+      ) : (
+        <div className=" container mx-auto py-10">
+          <div className=" lg:grid-cols-2 gap-x-10 grid grid-cols-1">
+            <div className="mt-5">
+              <TabsNav />
+            </div>
+            <div className="mt-5">
+              <div className=" flex border-b-2 border-gray-800  mb-4  hover:space-x-4 space-x-2  transition-all duration-300">
+                <ChevronDoubleLeftIcon className="h-6 w-6 mt-1 text-black" />
 
-            {/* dynamic content */}
-
-            {!next ? (
-              <div>
-                <div>
-                  <div className="  font-semibold p-2 max-w-2xl bg-black text-white">
-                    Haircut
-                  </div>
-
-                  <ul className="mt-5">
-                    {services?.map((name, index) => (
-                      <li
-                        key={index}
-                        className=" mb-8 flex cursor-pointer space-x-5 items-center"
-                      >
-                        <Button
-                          size="sm"
-                          onClick={(e) => handleNext(e)}
-                          className=" hover:bg-black hover:text-white  outline-4  font-semibold"
-                          variant="outlined"
-                        >
-                          Add
-                        </Button>
-                        <p className=" text-gray-800 font-semibold">
-                          {name?.name}
-                        </p>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                <h1 className="   border-gray-900  mb-4  font-semibold text-2xl font-co text-gray-900">
+                  Check-in
+                </h1>
               </div>
-            ) : (
-              <div>
-                <h1 className="  font-semibold text-2xl font-co">Servies</h1>
-                <p className="my-5 ">{service}</p>
-                <Button
-                  size="sm"
-                  onClick={() => handlePrev()}
-                  className=" hover:bg-black hover:text-white  outline-[8px]  font-semibold"
-                  variant="outlined"
-                >
-                  Add another service
-                </Button>
 
-                <div className="mt-5">
-                  <h1 className="  text-xl font-semibold">Date</h1>
-                  <div className=" flex  space-x-4">
-                    {formattedDates?.map((da) => {
-                      const formattedDate = formatDate(da);
+              {/* dynamic content */}
 
-                      const [day, abbreviation] = [
-                        formattedDate.slice(0, 2),
-                        formattedDate.slice(2),
-                      ];
+              {!next ? (
+                <div>
+                  <div>
+                    <div className="  font-semibold p-2 pl-4 max-w-2xl bg-black text-white">
+                      Haircut Services
+                    </div>
 
-                      return (
-                        <div
-                          onClick={() => setDate(da)}
-                          key={da}
-                          className={`border-2 text-black border-[#14100c] max-w-[4rem]   transition-all duration-300   uppercase cursor-pointer w-full mt-2 text-center rounded-md p-2 flex flex-col justify-center font-semibold  ${
-                            client.date === da
-                              ? "  text-white  bg-[#14100c]"
-                              : ""
-                          }`}
+                    <ul className="mt-5 pl-2">
+                      {services?.map((name, index) => (
+                        <li
+                          key={index}
+                          className=" mb-8 flex cursor-pointer space-x-5 items-center"
                         >
-                          <p>{day}</p>
-                          {/* <p>{abbreviation}</p> */}
-                        </div>
-                      );
-                    })}
+                          <Button
+                            size="sm"
+                            onClick={(e) => handleNext(e)}
+                            className=" hover:bg-black hover:text-white  outline-4  font-semibold"
+                            variant="outlined"
+                          >
+                            Add
+                          </Button>
+                          <p className=" text-gray-800 font-semibold">
+                            {name?.name}
+                          </p>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
+              ) : (
+                <div>
+                  <div className=" flex  items-center space-x-2">
+                    <ScissorsIcon className="h-6 w-6   rotate-45" />
 
-                <div className="mt-5">
-                  <h1 className="  text-xl font-semibold">
-                    Estimated Check-In Time
-                  </h1>
-                  <div className="  grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-2 ">
-                    {timeSlots &&
-                      timeSlots.map((slot, index) => (
-                        <div
-                          onClick={() =>
-                            setClient({ ...client, time: slot?.timeSlot })
-                          }
-                          key={index}
-                          className={` border-2  border-[#14100c] py-1 
+                    <h1 className="  font-semibold text-2xl font-co">
+                      Servies
+                    </h1>
+                  </div>
+
+                  <p className="my-5 ">{service}</p>
+                  <Button
+                    size="sm"
+                    onClick={() => handlePrev()}
+                    className=" hover:bg-black hover:text-white  outline-[8px]  font-semibold"
+                    variant="outlined"
+                  >
+                    Add another service
+                  </Button>
+
+                  <div className="mt-5">
+                    <div className=" flex  space-x-2">
+                      <CalendarDaysIcon className="h-6 w-6 " />
+
+                      <h1 className="  text-xl font-semibold">Date</h1>
+                    </div>
+
+                    <div className=" flex  space-x-4">
+                      {formattedDates?.map((da) => {
+                        const formattedDate = formatDate(da);
+
+                        const [day, abbreviation] = [
+                          formattedDate.slice(0, 1),
+                          formattedDate.slice(1),
+                        ];
+
+                        return (
+                          <div
+                            onClick={() => setDate(da)}
+                            key={da}
+                            className={`border-2 text-black border-[#14100c] max-w-[4rem]   transition-all duration-300   uppercase cursor-pointer w-full mt-2 text-center rounded-md p-2 flex flex-col justify-center font-semibold  ${
+                              client.date === da
+                                ? "  text-white  bg-[#14100c]"
+                                : ""
+                            }`}
+                          >
+                            <div>
+                              <p>{abbreviation}</p>
+                              <p>{day}</p>
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+
+                  <div className="mt-5">
+                    <div className=" flex space-x-2 ">
+                      <ClockIcon className="h-7 w-7 " />
+
+                      <h1 className="  text-xl font-semibold">
+                        Estimated Check-In Time
+                      </h1>
+                    </div>
+
+                    <div className="  grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-2 ">
+                      {timeSlots &&
+                        timeSlots.map((slot, index) => (
+                          <div
+                            onClick={() =>
+                              setClient({ ...client, time: slot?.timeSlot })
+                            }
+                            key={index}
+                            className={` border-2  border-[#14100c] py-1 
                         transition-all duration-300
                      hover:text-white  hover:bg-[#14100c]
                     cursor-pointer  mt-2 text-center rounded-md   px-[2rem]  bg-flex flex-col justify-center font-semibold text-[#14100c]  ${
@@ -292,117 +335,131 @@ function Choose() {
                         ? "  text-white  bg-[#14100c]"
                         : ""
                     }`}
-                        >
-                          <p>{slot?.timeSlot}</p>
+                          >
+                            <p>{slot?.timeSlot}</p>
+                          </div>
+                        ))}
+                    </div>
+                  </div>
+
+                  {/* Guests */}
+                  <div className=" mt-5">
+                    <h1 className="  text-xl font-semibold my-4">Guests</h1>
+                    <h1 className="mb-5">All Fields are requared</h1>
+                    <div>
+                      <form onSubmit={handleSubmit}>
+                        <div className="mb-4 flex  flex-col">
+                          <label
+                            htmlFor="firstName"
+                            className=" mb-2  font-semibold"
+                          >
+                            First Name
+                          </label>
+                          <input
+                            onChange={(e) =>
+                              setClient({
+                                ...client,
+                                firstName: e.target.value,
+                              })
+                            }
+                            value={client.firstName}
+                            required
+                            disabled={loading}
+                            id="firstName"
+                            variant="standard"
+                            placeholder="FirstName"
+                            className=" text-[#14100c]   p-2 placeholder:text-[14100c]"
+                          />
                         </div>
-                      ))}
+                        <div className="mb-4 flex  flex-col">
+                          <label
+                            htmlFor="lastName"
+                            className=" mb-2  font-semibold"
+                          >
+                            Last Name
+                          </label>
+                          <input
+                            onChange={(e) =>
+                              setClient({ ...client, lastName: e.target.value })
+                            }
+                            value={client.lastName}
+                            required
+                            disabled={loading}
+                            id="lastName"
+                            variant="standard"
+                            placeholder="LastName"
+                            className=" text-[#14100c]   p-2 placeholder:text-[14100c]"
+                          />
+                        </div>
+                        <div className="mb-4 flex  flex-col">
+                          <label
+                            htmlFor="phone"
+                            className=" mb-2  font-semibold"
+                          >
+                            Phone Number
+                          </label>
+                          <input
+                            onChange={(e) =>
+                              setClient({
+                                ...client,
+                                phoneNumber: e.target.value,
+                              })
+                            }
+                            disabled={loading}
+                            value={client.phoneNumber}
+                            required
+                            type="number"
+                            id="phone"
+                            variant="standard"
+                            placeholder="Phone"
+                            className=" text-[#14100c]   p-2 placeholder:text-[14100c]"
+                          />
+                        </div>
+                        <div className="mb-4 flex  flex-col">
+                          <label
+                            htmlFor="email"
+                            className=" mb-2  font-semibold"
+                          >
+                            Email
+                          </label>
+                          <input
+                            onChange={(e) =>
+                              setClient({ ...client, email: e.target.value })
+                            }
+                            value={client.email}
+                            required
+                            disabled={loading}
+                            type="email"
+                            id="email"
+                            variant="standard"
+                            placeholder="Email"
+                            className=" text-[#14100c]   p-2 placeholder:text-[14100c]"
+                          />
+                        </div>
+
+                        <Button
+                          type="submit"
+                          size="lg"
+                          className=" flex justify-center hover:bg-black mt-5 uppercase w-full font-bold hover:text-white   "
+                          variant="solid"
+                        >
+                          {loading ? (
+                            <Spinner className="h-6 w-6" />
+                          ) : (
+                            "Check-in"
+                          )}
+                        </Button>
+                      </form>
+                    </div>
                   </div>
                 </div>
+              )}
 
-                {/* Guests */}
-                <div className=" mt-5">
-                  <h1 className="  text-xl font-semibold my-4">Guests</h1>
-                  <h1 className="mb-5">All Fields are requared</h1>
-                  <div>
-                    <form onSubmit={handleSubmit}>
-                      <div className="mb-4 flex  flex-col">
-                        <label
-                          htmlFor="firstName"
-                          className=" mb-2  font-semibold"
-                        >
-                          First Name
-                        </label>
-                        <input
-                          onChange={(e) =>
-                            setClient({ ...client, firstName: e.target.value })
-                          }
-                          value={client.firstName}
-                          required
-                          disabled={loading}
-                          id="firstName"
-                          variant="standard"
-                          placeholder="FirstName"
-                          className=" text-[#14100c]   p-2 placeholder:text-[14100c]"
-                        />
-                      </div>
-                      <div className="mb-4 flex  flex-col">
-                        <label
-                          htmlFor="lastName"
-                          className=" mb-2  font-semibold"
-                        >
-                          Last Name
-                        </label>
-                        <input
-                          onChange={(e) =>
-                            setClient({ ...client, lastName: e.target.value })
-                          }
-                          value={client.lastName}
-                          required
-                          disabled={loading}
-                          id="lastName"
-                          variant="standard"
-                          placeholder="LastName"
-                          className=" text-[#14100c]   p-2 placeholder:text-[14100c]"
-                        />
-                      </div>
-                      <div className="mb-4 flex  flex-col">
-                        <label htmlFor="phone" className=" mb-2  font-semibold">
-                          Phone Number
-                        </label>
-                        <input
-                          onChange={(e) =>
-                            setClient({
-                              ...client,
-                              phoneNumber: e.target.value,
-                            })
-                          }
-                          disabled={loading}
-                          value={client.phoneNumber}
-                          required
-                          type="number"
-                          id="phone"
-                          variant="standard"
-                          placeholder="Phone"
-                          className=" text-[#14100c]   p-2 placeholder:text-[14100c]"
-                        />
-                      </div>
-                      <div className="mb-4 flex  flex-col">
-                        <label htmlFor="email" className=" mb-2  font-semibold">
-                          Email
-                        </label>
-                        <input
-                          onChange={(e) =>
-                            setClient({ ...client, email: e.target.value })
-                          }
-                          value={client.email}
-                          required
-                          disabled={loading}
-                          type="email"
-                          id="email"
-                          variant="standard"
-                          placeholder="Email"
-                          className=" text-[#14100c]   p-2 placeholder:text-[14100c]"
-                        />
-                      </div>
-
-                      <Button
-                        type="submit"
-                        size="lg"
-                        className=" flex justify-center hover:bg-black mt-5 uppercase w-full font-bold hover:text-white   "
-                        variant="solid"
-                      >
-                        {loading ? <Spinner className="h-6 w-6" /> : "Check-in"}
-                      </Button>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {/* dynamic content */}
+              {/* dynamic content */}
+            </div>
           </div>
         </div>
-      </div>
+      )}
 
       {/* Appointment Dialog */}
 
@@ -435,7 +492,7 @@ function Choose() {
         </DialogHeader>
         <DialogFooter>
           <Button variant="gradient" color="green" onClick={handleOpen}>
-            <span onClick={() => handleClear()}>Ok</span>
+            <span>Ok</span>
           </Button>
         </DialogFooter>
       </Dialog>

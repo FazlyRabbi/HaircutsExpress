@@ -1,8 +1,7 @@
 import React from "react";
-import Image from "next/image";
 
 import Link from "next/link";
-
+import { ClockIcon } from "@heroicons/react/24/outline";
 import {
   FaFacebookF,
   FaTwitter,
@@ -67,24 +66,40 @@ function Footer() {
               516.490.1330
             </Link>
           </div>
-          <div className="text-black">
-            <h3 className=" text-2xl capitalize font-co  text-white">Subscribe</h3>
-            <div className="py-4">
-              <input
-                type="email"
-                placeholder="Email"
-                className="text-lg border-2 w-full py-2 px-5 text-black placeholder-[#272626] focus:outline-none"
-              />
-              <button
-                type="submit"
-                className="mt-4 text-sm py-1 px-4 border-[1px] border-[#E2AE10] bg-[#91765a] hover:bg-white text-white  hover:text-black transition-all duration-200 "
-              >
-                Subscribe
-              </button>
+          <div className="mt-[1rem] flex    space-x-4">
+            <ClockIcon className="h-7 w-7 text-white  " />
+
+            <div className=" space-y-2 text-white">
+              <div className="flex space-x-8 ">
+                <div>Mon</div>
+                <div>10:00 AM - 6:00 PM</div>
+              </div>
+
+              <div className="flex space-x-8 ">
+                <div>Tue</div>
+                <div>10:00 AM - 6:00 PM</div>
+              </div>
+              <div className="flex space-x-8 ">
+                <div>Wed</div>
+                <div>10:00 AM - 6:00 PM</div>
+              </div>
+              <div className="flex space-x-8 ">
+                <div>Thu</div>
+                <div>10:00 AM - 6:00 PM</div>
+              </div>
+              <div className="flex space-x-8 ">
+                <div>Fri</div>
+                <div>10:00 AM - 6:00 PM</div>
+              </div>
+              <div className="flex space-x-8 ">
+                <div>Sat</div>
+                <div>10:00 AM - 6:00 PM</div>
+              </div>
+              <div className="flex space-x-8 ">
+                <div>Sun</div>
+                <div>10:00 AM - 3:00 PM</div>
+              </div>
             </div>
-            <p className="text-sm text-[#979595]">
-              *Be the first to know about offers
-            </p>
           </div>
         </div>
       </div>

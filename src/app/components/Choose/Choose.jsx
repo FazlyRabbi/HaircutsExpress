@@ -103,7 +103,7 @@ function Choose() {
     handlePrev();
     setClient({
       serviceName: "",
-      date: todayDate,
+      date: "",
       time: "",
       firstName: "",
       lastName: "",
@@ -190,7 +190,7 @@ function Choose() {
 
   return (
     <section className="bg-[#F5EEE7] h-full ">
-      <div className="about_bg_img w-full py-40 ">
+      <div className="about_bg_img w-full py-[6.5rem] ">
         <div className="container mx-auto px-4">
           <div className="text-white text-center">
             <h2 className="text-4xl md:text-6xl  font-co font-bold py-2  lg:py-4 tracking-[1px]">
@@ -210,6 +210,7 @@ function Choose() {
         </div>
       ) : (
         <div className=" container mx-auto py-10">
+          
           <div className=" lg:grid-cols-2 gap-x-10 grid grid-cols-1">
             <div className="mt-5">
               <TabsNav />

@@ -173,7 +173,7 @@ function Choose() {
         setOpen(true);
 
         refetch();
-        setDate(todayDate);
+        // setDate(todayDate);
         setLoading(false);
         notify();
         return;

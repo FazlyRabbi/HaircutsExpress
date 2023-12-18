@@ -88,7 +88,9 @@ function Choose() {
       );
 
       setClient({ ...client, date: date });
-      setTimeSlot(response?.data?.data); // Return the data from the response
+      setTimeSlot(response?.data?.data);
+
+      console.log(response);
     }
   );
 
@@ -115,7 +117,12 @@ function Choose() {
   useEffect(() => {
     setDate(todayDate);
     fetchService();
+    makeSlot();
   }, []);
+
+  const makeSlot = async () => {
+    const response = await axios.post(`${process.env.API_URL}/api/createslot`);
+  };
 
   const refetch = async () => {
     if (date === todayDate) {
@@ -210,7 +217,6 @@ function Choose() {
         </div>
       ) : (
         <div className=" container mx-auto py-10">
-          
           <div className=" lg:grid-cols-2 gap-x-10 grid grid-cols-1">
             <div className="mt-5">
               <TabsNav />

@@ -1,18 +1,25 @@
 "use client";
-import React from "react";
+import React ,{useState} from "react";
 import Link from "next/link";
 import Image from "next/image";
 import about_img_1 from "../../img/about_img_1.jpg";
 import about_img_2 from "../../img/about_img_2.jpg";
-
 import signature from "../../img/signature.svg";
 import { GiCheckMark } from "react-icons/gi";
 import { IoIosCut } from "react-icons/io";
 import { PiPlayLight } from "react-icons/pi";
 import Header from "../Header";
+import ModalVideo from 'react-modal-video'
+
+
 
 
 export default function About() {
+
+
+  const [isOpen, setOpen] = useState(false)
+
+
   return (
     <section>
       <Header />

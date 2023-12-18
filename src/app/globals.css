@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 
+
+
 body {
     font-family: 'DM Sans', sans-serif;
   }
@@ -115,3 +117,10 @@ body {
     user-select: none;
     white-space: nowrap;
 }
+
+
+
+
+
+
+

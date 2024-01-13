@@ -11,9 +11,7 @@ import {
 } from "@material-tailwind/react";
 import logo from "../../app/img/logo.png";
 
-
 export default function Header() {
-  
   const [openNav, setOpenNav] = React.useState(false);
 
   const [scrollHeight, setScrollHeight] = useState(false);
@@ -91,10 +89,36 @@ export default function Header() {
           href="/choose"
           className="flex   hover:text-[#c9ab8c] items-center"
         >
-         Appointment
+          Appointment
         </Link>
       </Typography>
 
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1    text-[1rem] font-dm  uppercase    text-white"
+      >
+        <Link
+          href="/products"
+          className="flex   hover:text-[#c9ab8c] items-center"
+        >
+          Products
+        </Link>
+      </Typography>
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1    text-[1rem] font-dm  uppercase    text-white"
+      >
+        <Link
+          href="/offer"
+          className="flex   hover:text-[#c9ab8c] items-center"
+        >
+          Offer
+        </Link>
+      </Typography>
       <Typography
         as="li"
         variant="small"
@@ -127,10 +151,7 @@ export default function Header() {
         color="blue-gray"
         className=" text-center p-3 px-6 cursor-pointer  bg-[#C28565]    text-[1rem] font-dm  uppercase    text-white"
       >
-        <Link
-          href="/choose"
-          className="flex   font-dm items-center"
-        >
+        <Link href="/choose" className="flex   font-dm items-center">
           Book Now
         </Link>
       </Typography>

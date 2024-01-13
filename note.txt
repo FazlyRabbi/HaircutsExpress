@@ -3,3 +3,8 @@
  Aad Tabs --  on Choose page
 
  fix desing on chect-in page
+
+
+_________________________
+ add Offer section 
+ add Product section 

@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { IoLogoWhatsapp } from "react-icons/io";
 import product_img_1 from "../../img/Products/product_1.jpg";
 import product_img_2 from "../../img/Products/product_2.jpg";
 import product_img_3 from "../../img/Products/product_3.jpg";
@@ -8,6 +9,8 @@ import product_img_4 from "../../img/Products/product_4.jpg";
 import product_img_5 from "../../img/Products/product_5.jpg";
 import product_img_6 from "../../img/Products/product_6.jpg";
 import product_img_7 from "../../img/Products/product_7.jpg";
+import calltoaction from "../../img/Products/call-to-action.svg";
+import profile from "../../img/Products/profile.webp";
 
 function Product() {
   return (
@@ -208,6 +211,55 @@ function Product() {
           </div>
         </div>
       </div>
+          {/* =============== call to action ============ */}
+          <div className="bg-white py-20 w-full">
+            <div className="container mx-auto px-4">
+          <div className=" grid gap-10 lg:grid-cols-3">
+            <div className=" bg-[#F5EEE7] w-full py-10 rounded-3xl px-8 lg:col-span-2 shadow-md">
+              <div className="grid gap-10 md:grid-cols-2">
+                <div className="flex justify-center md:order-last">
+                  <Image
+                    src={calltoaction}
+                    alt="call to action "
+                    className="w-96"
+                  />
+                </div>
+                <div className="space-y-1">
+                  <h3 className=" text-[#E2AE10] font-semibold text-2xl md:text-3xl mb-[15px]">
+                    Got a project in mind?
+                  </h3>
+                  <h1 className="text-3xl lg:text-6xl md:text-5xl  mb-[16px] font-bold  text-[#6d6c6c] md:leading-[55px]">
+                    Let&rsquo;s discuss the details
+                  </h1>
+                  <div className="pt-8 md:pt-16">
+                    <button className="font-semibold text-[#E2AE10] text-xl py-4 px-10 rounded-full bg-white hover:text-white hover:bg-primary transition-all duration-300">
+                      Schdule a Call
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-[#F5EEE7] w-full py-10 rounded-3xl px-8 shadow-md">
+              <div className="flex flex-col gap-5">
+                <div>
+                  <Image src={profile} alt="profile" className="w-28" />
+                </div>
+                <h3 className="text-[#6d6c6c] font-semibold text-xl md:text-3xl lg:text-2xl">
+                  My name is Noman, Design Manager at Design Monks. I will
+                  answer all your questions.
+                </h3>
+                <div className="pt-5">
+                  <button className="font-semibold hover:text-[#E2AE10] text-xl py-4 px-10 rounded-full hover:bg-white text-white bg-primary transition-all duration-300 flex items-center gap-3">
+                    <p>Ask Question</p>
+                    <IoLogoWhatsapp className="text-green-500 text-[1.6rem]" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+            </div>
+          </div>
     </section>
   );
 }

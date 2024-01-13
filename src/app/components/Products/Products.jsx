@@ -211,9 +211,9 @@ function Product() {
           </div>
         </div>
       </div>
-          {/* =============== call to action ============ */}
-          <div className="bg-white py-20 w-full">
-            <div className="container mx-auto px-4">
+      {/* =============== call to action ============ */}
+      <div className="bg-white py-20 w-full">
+        <div className="container mx-auto px-4">
           <div className=" grid gap-10 lg:grid-cols-3">
             <div className=" bg-[#F5EEE7] w-full py-10 rounded-3xl px-8 lg:col-span-2 shadow-md">
               <div className="grid gap-10 md:grid-cols-2">
@@ -245,7 +245,7 @@ function Product() {
                   <Image src={profile} alt="profile" className="w-28" />
                 </div>
                 <h3 className="text-[#6d6c6c] font-semibold text-xl md:text-3xl lg:text-2xl">
-                  My name is Noman, Design Manager at Design Monks. I will
+                  My name is Noman, Manager at haircut express. I will
                   answer all your questions.
                 </h3>
                 <div className="pt-5">
@@ -257,9 +257,8 @@ function Product() {
               </div>
             </div>
           </div>
-
-            </div>
-          </div>
+        </div>
+      </div>
     </section>
   );
 }
